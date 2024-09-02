@@ -1,179 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shengbo's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      color: #333;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-        }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-        }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
 
-        section {
-            padding: 60px 0;
-            text-align: center;
-        }
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
 
-        section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .profile-photo {
+      width: 250px;  /* 幅を大きく調整 */
+      height: 250px; /* 高さを大きく調整 */
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 影を少し強調 */
+    }
 
-        .about, .skills, .projects, .contact {
-            background-color: #fff;
-            margin: 20px auto;
-            padding: 40px;
-            border-radius: 8px;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .about, .skills, .projects, .contact {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .about p, .skills p, .contact p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
+    .about p, .skills p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
 
-        .skills-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .skills {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .skills-list .skill {
-            background-color: #333;
-            color: #fff;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
+    .skills h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-        .projects .project-item {
-            margin: 20px 0;
-            text-align: left;
-        }
+    .skills-category {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-left: 4px solid #333; /* カテゴリを視覚的に分けるための左ボーダー */
+      background-color: #f9f9f9; /* カテゴリ背景色 */
+      border-radius: 4px;
+    }
 
-        .projects .project-item h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .skills-category h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-        .projects .project-item p {
-            color: #666;
-        }
+    .skills-category p {
+      margin: 10px 0;
+      color: #666;
+      font-size: 1.1rem;
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px; /* スキルリストのトップマージン */
+    }
 
-        footer p {
-            margin: 0;
-        }
-    </style>
+    .skills-list .skill {
+      background-color: #333;
+      color: #fff;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1rem; /* フォントサイズを統一 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+      transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
+    }
+
+    .skills-list .skill:hover {
+      transform: scale(1.1); /* ホバー時の拡大 */
+    }
+
+    .projects .project-item {
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .projects .project-item h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .projects .project-item p {
+      color: #666;
+    }
+
+    .project-category {
+      background-color: #f9f9f9; /* 背景色を淡い色に */
+      padding: 30px;
+      margin-bottom: 40px; /* 各カテゴリの間隔を広げる */
+      border-radius: 8px; /* 角を丸くする */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+    }
+
+    .project-category h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333; /* タイトルの下にボーダーを追加 */
+      padding-bottom: 10px; /* タイトル下の余白 */
+    }
+
+    .project-item {
+      margin-bottom: 20px; /* プロジェクト間の余白 */
+    }
+
+    .project-item h4 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 10px; /* プロジェクト名の下の余白 */
+    }
+
+    .project-item p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>My Portfolio</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <h1>Shengbo's Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section id="about" class="about">
   <h2>About Me</h2>
   <!-- 画像を追加 -->
   <img src="my-photo.jpg" alt="Your Name" class="profile-photo">
-  <p>Hello! I'm a passionate developer with a knack for building beautiful and functional websites. With a background in computer science and a love for design, I create solutions that not only perform well but also provide a great user experience.</p>
+  <p>Hello! I'm Shengbo Wang, a student at Waseda University in Japan. Since 2022, I have been deeply committed to studying IT technology, exploring a wide range of fields that interest me. Over time, I developed a particular focus on web backend development and network security. Currently, I am dedicated to expanding my expertise in Go, Next.js, authentication, and microservices to build robust and scalable web applications.</p>
 </section>
 
 <section id="skills" class="skills">
-    <h2>Skills</h2>
+  <h2>Skills</h2>
+  
+  <!-- Programming Languages -->
+  <div class="skills-category">
+    <h3>Programming Languages</h3>
+    <p><strong>Proficient in:</strong></p>
     <div class="skills-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">Python</div>
-        <div class="skill">Django</div>
-        <div class="skill">SQL</div>
+      <div class="skill">Python</div>
+      <div class="skill">Ruby</div>
+      <div class="skill">Go</div>
     </div>
+    <p><strong>Familiar with:</strong></p>
+    <div class="skills-list">
+      <div class="skill">TypeScript</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">C#</div>
+    </div>
+    <p><strong>Experience with:</strong></p>
+    <div class="skills-list">
+      <div class="skill">C</div>
+      <div class="skill">SQL</div>
+      <div class="skill">R</div>
+    </div>
+  </div>
+  
+  <!-- Tech -->
+  <div class="skills-category">
+    <h3>Tech</h3>
+    <p><strong>Framework:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Ruby on Rails</div>
+      <div class="skill">Flask</div>
+      <div class="skill">Express</div>
+      <div class="skill">Vue.js</div>
+      <div class="skill">React</div>
+      <div class="skill">Next.js</div>
+    </div>
+    <p><strong>UI Framework:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Bootstrap</div>
+      <div class="skill">Material-UI</div>
+    </div>
+    <p><strong>Architecture:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Microservices</div>
+    </div>
+    <p><strong>Database:</strong></p>
+    <div class="skills-list">
+      <div class="skill">MySQL</div>
+      <div class="skill">PostgreSQL</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">SQLite</div>
+    </div>
+    <p><strong>Containerization & Orchestration:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Docker</div>
+      <div class="skill">Docker Compose</div>
+      <div class="skill">Kubernetes</div>
+    </div>
+    <p><strong>Version Control:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+    </div>
+    <p><strong>Operating System:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Linux</div>
+    </div>
+    <p><strong>Testing Framework:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Jest</div>
+      <div class="skill">Runn</div>
+      <div class="skill">RSpec</div>
+    </div>
+  </div>
+
+  <!-- Security -->
+  <div class="skills-category">
+    <h3>Security</h3>
+    
+    <!-- Tools & Technologies -->
+    <p><strong>Tools & Technologies:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Prometheus & Grafana</div>
+      <div class="skill">pfSense</div>
+      <div class="skill">OpenVpn</div>
+      <div class="skill">OpenID Connect</div>
+    </div>
+    
+    <!-- Concepts -->
+    <p><strong>Concepts:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Network Security</div>
+      <div class="skill">VPN Configuration</div>
+      <div class="skill">Two-Factor Authentication</div>
+      <div class="skill">Implementation of HTTPS Communication</div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="skills-category">
+    <h3>Certifications</h3>
+    <div class="skills-list">
+      <div class="skill">Passed Japanese Language Proficiency Test N1(2024)</div>
+      <div class="skill">Passed Applied Information Technology Engineer Examination(2023)</div>
+      <div class="skill">Passed Fundamental Information Technology Engineer Examination(2022)</div>
+    </div>
+  </div>
+
 </section>
 
 <section id="projects" class="projects">
-    <h2>Projects</h2>
+  <h2>Projects</h2>
+  <!-- Professional Projects -->
+  <div class="project-category">
+    <h3>Professional Projects</h3>
+    
     <div class="project-item">
-        <h3>Project One</h3>
-        <p>A web application that allows users to create and manage their tasks efficiently. Built with React and Node.js.</p>
+      <h4>E-commerce Platform</h4>
+      <p>An e-commerce platform that provides a seamless shopping experience for users. Developed using Django and React.</p>
     </div>
+    
     <div class="project-item">
-        <h3>Project Two</h3>
-        <p>An e-commerce platform that provides a seamless shopping experience for users. Developed using Django and React.</p>
+      <h4>Corporate Website Redesign</h4>
+      <p>A complete redesign of a corporate website to enhance user experience and mobile responsiveness. Built with Next.js and Tailwind CSS.</p>
     </div>
+    
     <div class="project-item">
-        <h3>Project Three</h3>
-        <p>A portfolio website template built with HTML, CSS, and JavaScript to showcase personal projects and skills.</p>
+      <h4>Internal Dashboard Tool</h4>
+      <p>A dashboard tool for internal use to monitor sales and performance metrics. Developed using Angular and Node.js.</p>
     </div>
+  </div>
+  
+  <!-- Private Projects -->
+  <div class="project-category">
+    <h3>Private Projects</h3>
+    
+    <div class="project-item">
+      <h4>Task Manager App</h4>
+      <p>A web application that allows users to create and manage their tasks efficiently. Built with React and Node.js.</p>
+    </div>
+    
+    <div class="project-item">
+      <h4>Personal Finance Tracker</h4>
+      <p>A mobile-friendly web app that helps users track their expenses and manage budgets. Developed using Vue.js and Firebase.</p>
+    </div>
+    
+    <div class="project-item">
+      <h4>Portfolio Website</h4>
+      <p>A portfolio website template built with HTML, CSS, and JavaScript to showcase personal projects and skills.</p>
+    </div>
+  </div>
+  
+  
 </section>
 
+
 <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, please feel free to reach out via email or connect with me on LinkedIn.</p>
-    <p>Email: youremail@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/yourprofile</a></p>
+  <h2>Contact Me</h2>
+  <p>If you'd like to get in touch, please feel free to reach out via email.</p>
+  <p>Email: shengbo122519@gmail.com</p>
+  <p>Github: <a href="https://github.com/KeihakuOh" target="_blank">KeihakuOh</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  <p>&copy; 2024 Shengbo Wang. All rights reserved.</p>
 </footer>
 
 </body>
