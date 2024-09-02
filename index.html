@@ -16,42 +16,18 @@
             color: #333;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 30px;
-            text-align: center;
+        /* 上のCSSに追加 */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-        }
-
-        section {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .about, .skills, .projects, .contact {
+        .about {
             background-color: #fff;
             margin: 20px auto;
             padding: 40px;
@@ -60,49 +36,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .about p, .skills p, .contact p {
+        .about p {
             font-size: 1.1rem;
             line-height: 1.8;
-        }
-
-        .skills-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .skills-list .skill {
-            background-color: #333;
-            color: #fff;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
-
-        .projects .project-item {
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .projects .project-item h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .projects .project-item p {
-            color: #666;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 0;
         }
     </style>
 </head>
@@ -120,45 +56,12 @@
 
 <section id="about" class="about">
     <h2>About Me</h2>
+    <!-- 画像を追加 -->
+    <img src="my-photo.jpg" alt="Your Name" class="profile-photo">
     <p>Hello! I'm a passionate developer with a knack for building beautiful and functional websites. With a background in computer science and a love for design, I create solutions that not only perform well but also provide a great user experience.</p>
 </section>
 
-<section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">Python</div>
-        <div class="skill">Django</div>
-        <div class="skill">SQL</div>
-    </div>
-</section>
-
-<section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-item">
-        <h3>Project One</h3>
-        <p>A web application that allows users to create and manage their tasks efficiently. Built with React and Node.js.</p>
-    </div>
-    <div class="project-item">
-        <h3>Project Two</h3>
-        <p>An e-commerce platform that provides a seamless shopping experience for users. Developed using Django and React.</p>
-    </div>
-    <div class="project-item">
-        <h3>Project Three</h3>
-        <p>A portfolio website template built with HTML, CSS, and JavaScript to showcase personal projects and skills.</p>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, please feel free to reach out via email or connect with me on LinkedIn.</p>
-    <p>Email: youremail@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/yourprofile</a></p>
-</section>
+<!-- その他のセクションは省略 -->
 
 <footer>
     <p>&copy; 2024 Your Name. All rights reserved.</p>
