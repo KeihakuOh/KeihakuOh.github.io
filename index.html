@@ -50,6 +50,50 @@
       margin-bottom: 20px;
       color: #333;
     }
+    .about h2 {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .education-item {
+      margin-bottom: 20px;
+    }
+
+    .education-item h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .education-item p {
+      margin: 5px 0;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .degree {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .dates {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+
 
     .profile-photo {
       width: 250px;  /* 幅を大きく調整 */
@@ -209,10 +253,38 @@
   <!-- 画像を追加 -->
   <img src="my-photo.jpg" alt="Your Name" class="profile-photo">
   <p>Hello! I'm Shengbo Wang, a student at Waseda University in Japan. Since September 2022, I have been deeply committed to studying IT technology, exploring a wide range of fields that interest me. Over time, I developed a particular focus on web backend development and network security. Currently, I am dedicated to expanding my expertise in Go, Next.js, authentication, and microservices to build robust and scalable web applications.</p>
+
+  <!-- Education Section within About Me -->
+  <h2>Education</h2>
+  <div class="education-item">
+    <h3>Waseda University, Tokyo, JP</h3>
+    <p class="degree">Master of Electrical Engineering and Bioscience, School of Advanced Science and Engineering</p>
+    <p class="dates">April 2024 - March 2026</p>    
+  </div>
+  <div class="education-item">
+    <h3>Waseda University, Tokyo, JP</h3>
+    <p class="degree">Bachelor of Electrical Engineering and Bioscience, School of Advanced Science and Engineering</p>
+    <p class="dates">April 2020 – March 2024</p>   
+  </div>
+
+  <!-- Hobbies Section within About Me -->
+  <h2>Hobbies</h2>
+  <p>I enjoy exploring various cultures and traveling abroad. Some of the countries I have visited include France and Indonesia. In my free time, I also like working on personal tech projects, reading books on software architecture, and learning new programming languages.</p>
 </section>
+
 
 <section id="skills" class="skills">
   <h2>Skills</h2>
+
+  <div class="skills-category">
+    <h3>Language Skills</h3>
+    <p><strong>Levels:</strong></p>
+    <div class="skills-list">
+      <div class="skill">Chinese: Professional</div>
+      <div class="skill">Japanese: Professional</div>
+      <div class="skill">English: Conversational</div>
+    </div>
+  </div>
   
   <!-- Programming Languages -->
   <div class="skills-category">
@@ -321,13 +393,20 @@
     </div>
   </div>
 
+  <div class="skills-category">
+    <h3>Events & Participation</h3>
+    <div class="skills-list">
+      <div class="skill">Participant of the Security Mini Camp in Yamanashi 2024, organized by IPA</div>
+    </div>
+  </div>
+
 </section>
 
 <section id="projects" class="projects">
   <h2>Projects</h2>
   <!-- Professional Projects -->
   <div class="project-category">
-    <h3>Professional Projects</h3>
+    <h3>Professional Projects(Part Time)</h3>
     
     <div class="project-item">
       <h4>Full Stack Engineer at CUUSOO SYSTEM (Tokyo, JP) — May 2023 - Present</h4>
@@ -401,7 +480,7 @@
   <div class="project-category">
     <h3>Private Personal Projects</h3>
     <div class="project-item">
-      <h4>Microservices Implementation (Personal Development) — July 2024 – Present</h4>
+      <h4>Microservices Implementation — July 2024 – Present</h4>
       <p>
         To expand my knowledge beyond monolithic architectures, I decided to implement a ticket sales feature using microservices. This project is currently ongoing and focuses on enhancing service modularity and scalability.
       </p>
@@ -419,7 +498,7 @@
     </div>
     
     <div class="project-item">
-      <h4>Hotel Booking Site (Personal Development) — April 2024 - June 2024</h4>
+      <h4>Hotel Booking Site — April 2024 - June 2024</h4>
       <p>
         During my long-term internship, I mainly used Ruby, an object-oriented language. Seeking to diversify my skills, I decided to develop a hotel booking site using Go, a non-object-oriented language that has recently gained popularity. PostgreSQL was chosen for the database due to its robust performance.
       </p>
@@ -431,7 +510,7 @@
     </div>
     
     <div class="project-item">
-      <h4>Memory Matching Game (Personal Development) — April 2024</h4>
+      <h4>Memory Matching Game — April 2024</h4>
       <p>
         Having developed a strong foundation in backend development, I decided to expand my knowledge to the frontend to gain a comprehensive understanding of web systems. I created a Memory Matching Game using React to achieve this goal.
       </p>
@@ -443,16 +522,17 @@
     </div>
     
     <div class="project-item">
-      <h4>Post-Sharing Website (Personal Development) — May 2023 – August 2023</h4>
+      <h4>Post-Sharing Website — May 2023 – August 2023</h4>
       <p>
         My growing interest in web development led me to learn Ruby on Rails, known for its ease of setup. Using Ruby on Rails, I developed a post-sharing website to enhance my web development skills.
       </p>
       <ul>
         <li>
           <strong>Implementing MVC and Session Management:</strong> I effectively utilized the MVC model to implement session-related features such as login and logout. I also implemented functionalities
-    
+        </li>
+      </ul>
+    </div>
   </div>
-  
 </section>
 
 
