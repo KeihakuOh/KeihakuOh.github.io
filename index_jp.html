@@ -33,6 +33,20 @@
       margin-top: 20px;
     }
 
+    .language-link {
+      position: absolute; /* 絶対配置で右上に配置 */
+      top: 10px; /* 上端からの位置を設定 */
+      right: 20px; /* 右端からの位置を設定 */
+      text-decoration: none; /* 下線を削除 */
+      font-weight: bold; /* 太字にする */
+      color: white; /* 文字色を白に設定 */
+      font-size: 1.2em; /* フォントサイズを大きくする */
+      border: 2px solid white; /* 白い枠線を追加 */
+      padding: 5px 10px; /* リンクにパディングを追加 */
+      border-radius: 5px; /* 角を少し丸める */
+      background-color: transparent; /* 背景色を透明にする */
+    }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
@@ -235,16 +249,18 @@
 </head>
 <body>
 
-<header>
-  <h1>Shengboのポートフォリオ</h1>
-  <nav>
-    <a href="#about">自己紹介</a>
-    <a href="#skills">スキル</a>
-    <a href="#projects">プロジェクト</a>
-    <a href="#contact">連絡先</a>
-    <a href="index.html">English</a> 
-  </nav>
-</header>
+  <header>
+    <h1>Shengboのポートフォリオ</h1>
+    <nav>
+      <a href="#about">自己紹介</a>
+      <a href="#skills">スキル</a>
+      <a href="#projects">プロジェクト</a>
+      <a href="#contact">連絡先</a>
+      <!-- ここには言語リンクは置かない -->
+    </nav>
+    <!-- 言語リンクを右上に配置 -->
+    <a href="index.html" class="language-link">Switch to English</a>
+  </header>
 
 <section id="about" class="about">
   <h2>自己紹介</h2>
