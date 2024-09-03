@@ -421,6 +421,12 @@
         <li>
           <strong>Developing Reply-to-Reply Feature for Comments:</strong> To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency.
         </li>
+        <li>
+          <strong>Implementation of a Comment Notification Settings System:</strong> Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly.
+        </li>
+        <li>
+          <strong>Implementation of a System to Display Company Information on a Map:</strong> To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails.
+        </li>
       </ul>
     </div>
     
