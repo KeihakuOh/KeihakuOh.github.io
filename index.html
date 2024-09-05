@@ -539,6 +539,27 @@
   <div class="project-category">
     <h3>Private Personal Projects</h3>
     <div class="project-item">
+      <h4>Implementing OAuth 2.0 and OpenID Connect (OIDC) in Go — September 2024 – Present</h4>
+      <div class="repository-link">
+        <a href="https://github.com/KeihakuOh/Auth-go" target="_blank" class="styled-link">
+          <button class="minimal-btn">
+            <i class="fab fa-github"></i> View GitHub Repository
+          </button>
+        </a>
+      </div>
+      <p>
+        I am interested in learning more about Go, especially in the area of security authentication. Therefore, I decided to implement OAuth 2.0 and OpenID Connect (OIDC) in Go. The purpose of this program is to allow users to authenticate with Google and use their authentication information to upload photos to Google Photos. The implementation of OAuth 2.0 has been completed, and the next steps will involve implementing OIDC and integrating front-end design.
+      </p>
+      <ul>
+        <li>
+          <strong>Organized structure of HTTP endpoints:</strong> The /start endpoint redirects users to Google's authentication page, and the /callback endpoint handles post-authentication processes such as token retrieval and photo upload, maintaining a clear flow.
+        </li>
+        <li>
+          <strong>Usage of Google Photos API:</strong> The uploadPhoto() function uploads photos to the Google Photos API's uploads endpoint and retrieves an uploadToken. This token is then used to add the photo to the Google Photos library in the subsequent request.
+        </li>
+      </ul>      
+    </div>
+    <div class="project-item">
       <h4>Microservices Implementation — July 2024 – Present</h4>
       <div class="repository-link">
         <a href="https://github.com/KeihakuOh/Multi-Service-Apps" target="_blank" class="styled-link">

@@ -538,6 +538,28 @@
   <div class="project-category">
     <h3>プライベートパーソナルプロジェクト</h3>
     <div class="project-item">
+      <h4>GoでOAuth2.0とOIDCの実装 — 2024年9月 – 現在</h4>
+      <div class="repository-link">
+        <a href="https://github.com/KeihakuOh/Auth-go" target="_blank" class="styled-link">
+          <button class="minimal-btn">
+            <i class="fab fa-github"></i> GitHubリポジトリを見る
+          </button>
+        </a>
+      </div>
+      <p>
+        Goについてさらに学びたいと考え、特にセキュリティの認証に興味を持っています。そのため、GoでOAuth 2.0とOpenID Connect(OIDC)を実装することに決めました。このプログラムの目的は、ユーザーがGoogleで認証を行い、その認証情報を使ってGoogle Photosに写真をアップロードすることです。現在はOAuth 2.0の実装が完了しており、次のステップとしてOIDCの実装とフロントエンドデザインの取り込みを進めたいと考えています。
+      </p>
+      <ul>
+        <li>
+          <strong>HTTPエンドポイントの整理された構成:</strong> /start エンドポイントでユーザーをGoogleの認証ページにリダイレクトし、/callback エンドポイントで認証後の処理（トークン取得、写真のアップロード）を行うという明確な流れが保たれています。
+        </li>
+        <li>
+          <strong>Google Photos APIの使用:</strong> uploadPhoto() 関数では、Google Photos APIのuploadsエンドポイントに写真をアップロードし、uploadTokenを取得しています。このトークンを使って、次のリクエストで写真をGoogle Photosライブラリに追加します。
+        </li>
+      </ul>
+    </div>
+    
+    <div class="project-item">
       <h4>マイクロサービスの実装 — 2024年7月 – 現在</h4>
       <div class="repository-link">
         <a href="https://github.com/KeihakuOh/Multi-Service-Apps" target="_blank" class="styled-link">
