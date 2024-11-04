@@ -1,651 +1,756 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shengboのポートフォリオ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f5f5f5;
-      color: #333;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shengboのポートフォリオ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        color: #333;
+      }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-    }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+      }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
 
-    nav {
-      text-align: center;
-      margin-top: 20px;
-    }
+      nav {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-    .language-link {
-      position: absolute; /* 絶対配置で右上に配置 */
-      top: 10px; /* 上端からの位置を設定 */
-      right: 20px; /* 右端からの位置を設定 */
-      text-decoration: none; /* 下線を削除 */
-      font-weight: bold; /* 太字にする */
-      color: white; /* 文字色を白に設定 */
-      font-size: 1.2em; /* フォントサイズを大きくする */
-      border: 2px solid white; /* 白い枠線を追加 */
-      padding: 5px 10px; /* リンクにパディングを追加 */
-      border-radius: 5px; /* 角を少し丸める */
-      background-color: transparent; /* 背景色を透明にする */
-    }
+      .language-link {
+        position: absolute; /* 絶対配置で右上に配置 */
+        top: 10px; /* 上端からの位置を設定 */
+        right: 20px; /* 右端からの位置を設定 */
+        text-decoration: none; /* 下線を削除 */
+        font-weight: bold; /* 太字にする */
+        color: white; /* 文字色を白に設定 */
+        font-size: 1.2em; /* フォントサイズを大きくする */
+        border: 2px solid white; /* 白い枠線を追加 */
+        padding: 5px 10px; /* リンクにパディングを追加 */
+        border-radius: 5px; /* 角を少し丸める */
+        background-color: transparent; /* 背景色を透明にする */
+      }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-    }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+      }
 
-    section {
-      padding: 60px 0;
-      text-align: center;
-    }
+      section {
+        padding: 60px 0;
+        text-align: center;
+      }
 
-    section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .about h2 {
-      font-size: 1.8rem;
-      margin-top: 30px;
-      color: #333;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
+      section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .about h2 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+      }
 
-    .education-item {
-      margin-bottom: 20px;
-    }
+      .education-item {
+        margin-bottom: 20px;
+      }
 
-    .education-item h3 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: #333;
-    }
+      .education-item h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+      }
 
-    .education-item p {
-      margin: 5px 0;
-      color: #666;
-      font-size: 1.1rem;
-    }
+      .education-item p {
+        margin: 5px 0;
+        color: #666;
+        font-size: 1.1rem;
+      }
 
-    .degree {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 5px;
-      color: #333;
-    }
+      .degree {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #333;
+      }
 
-    .dates {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 20px;
-    }
+      .dates {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-    h3 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
+      h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
 
-    .profile-photo {
-      width: 250px;  /* 幅を大きく調整 */
-      height: 250px; /* 高さを大きく調整 */
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 影を少し強調 */
-    }
+      .profile-photo {
+        width: 250px; /* 幅を大きく調整 */
+        height: 250px; /* 高さを大きく調整 */
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 影を少し強調 */
+      }
 
-    .about, .skills, .projects, .contact {
-      background-color: #fff;
-      margin: 20px auto;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      .about,
+      .skills,
+      .projects,
+      .contact {
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .about p, .skills p, .contact p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
+      .about p,
+      .skills p,
+      .contact p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
 
-    .skills {
-      background-color: #fff;
-      margin: 20px auto;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      .skills {
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .skills h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
+      .skills h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        color: #333;
+      }
 
-    .skills-category {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-left: 4px solid #333; /* カテゴリを視覚的に分けるための左ボーダー */
-      background-color: #f9f9f9; /* カテゴリ背景色 */
-      border-radius: 4px;
-    }
+      .skills-category {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-left: 4px solid #333; /* カテゴリを視覚的に分けるための左ボーダー */
+        background-color: #f9f9f9; /* カテゴリ背景色 */
+        border-radius: 4px;
+      }
 
-    .skills-category h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 15px;
-    }
+      .skills-category h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
 
-    .skills-category p {
-      margin: 10px 0;
-      color: #666;
-      font-size: 1.1rem;
-    }
+      .skills-category p {
+        margin: 10px 0;
+        color: #666;
+        font-size: 1.1rem;
+      }
 
-    .skills-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 10px; /* スキルリストのトップマージン */
-    }
+      .skills-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px; /* スキルリストのトップマージン */
+      }
 
-    .skills-list .skill {
-      background-color: #333;
-      color: #fff;
-      margin: 10px;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 1rem; /* フォントサイズを統一 */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-      transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
-    }
+      .skills-list .skill {
+        background-color: #333;
+        color: #fff;
+        margin: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem; /* フォントサイズを統一 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+        transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
+      }
 
-    .skills-list .skill:hover {
-      transform: scale(1.1); /* ホバー時の拡大 */
-    }
+      .skills-list .skill:hover {
+        transform: scale(1.1); /* ホバー時の拡大 */
+      }
 
-    .projects .project-item {
-      margin: 20px 0;
-      text-align: left;
-    }
+      .projects .project-item {
+        margin: 20px 0;
+        text-align: left;
+      }
 
-    .projects .project-item h3 {
-      color: #333;
-      margin-bottom: 10px;
-    }
+      .projects .project-item h3 {
+        color: #333;
+        margin-bottom: 10px;
+      }
 
-    .projects .project-item p {
-      color: #666;
-    }
+      .projects .project-item p {
+        color: #666;
+      }
 
-    .project-category {
-      background-color: #f9f9f9; /* 背景色を淡い色に */
-      padding: 30px;
-      margin-bottom: 40px; /* 各カテゴリの間隔を広げる */
-      border-radius: 8px; /* 角を丸くする */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
-    }
+      .project-category {
+        background-color: #f9f9f9; /* 背景色を淡い色に */
+        padding: 30px;
+        margin-bottom: 40px; /* 各カテゴリの間隔を広げる */
+        border-radius: 8px; /* 角を丸くする */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+      }
 
-    .project-category h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #333; /* タイトルの下にボーダーを追加 */
-      padding-bottom: 10px; /* タイトル下の余白 */
-    }
+      .project-category h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #333; /* タイトルの下にボーダーを追加 */
+        padding-bottom: 10px; /* タイトル下の余白 */
+      }
 
-    .project-item {
-      margin-bottom: 20px; /* プロジェクト間の余白 */
-    }
+      .project-item {
+        margin-bottom: 20px; /* プロジェクト間の余白 */
+      }
 
-    .project-item h4 {
-      font-size: 1.4rem;
-      color: #333;
-      margin-bottom: 10px; /* プロジェクト名の下の余白 */
-    }
+      .project-item h4 {
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 10px; /* プロジェクト名の下の余白 */
+      }
 
-    .project-item p {
-      color: #666;
-      font-size: 1rem;
-    }
+      .project-item p {
+        color: #666;
+        font-size: 1rem;
+      }
 
-    .repository-link {
-      margin-top: 15px;
-      text-align: center; /* ボタンを中央に配置 */
-    }
+      .repository-link {
+        margin-top: 15px;
+        text-align: center; /* ボタンを中央に配置 */
+      }
 
-    .minimal-btn {
-      font-size: 1.2em; /* 少し大きめのフォントサイズ */
-      padding: 10px 20px; /* ボタンのパディングを調整 */
-      background-color: #000; /* ボタンの背景色を黒に */
-      color: #fff; /* テキストカラーを白に */
-      border: 2px solid #000; /* ボーダーを黒で設定 */
-      border-radius: 25px; /* 角を少し丸くする */
-      cursor: pointer; /* カーソルをポインターに */
-      transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
-    }
+      .minimal-btn {
+        font-size: 1.2em; /* 少し大きめのフォントサイズ */
+        padding: 10px 20px; /* ボタンのパディングを調整 */
+        background-color: #000; /* ボタンの背景色を黒に */
+        color: #fff; /* テキストカラーを白に */
+        border: 2px solid #000; /* ボーダーを黒で設定 */
+        border-radius: 25px; /* 角を少し丸くする */
+        cursor: pointer; /* カーソルをポインターに */
+        transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
+      }
 
-    .minimal-btn:hover {
-      background-color: #fff; /* ホバー時に背景を白に */
-      color: #000; /* ホバー時にテキストを黒に */
-    }
+      .minimal-btn:hover {
+        background-color: #fff; /* ホバー時に背景を白に */
+        color: #000; /* ホバー時にテキストを黒に */
+      }
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-    }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
 
-    footer p {
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Shengboのポートフォリオ</h1>
+      <nav>
+        <a href="#about">自己紹介</a>
+        <a href="#skills">スキル</a>
+        <a href="#projects">プロジェクト</a>
+        <a href="#contact">連絡先</a>
+        <!-- ここには言語リンクは置かない -->
+      </nav>
+      <!-- 言語リンクを右上に配置 -->
+      <a href="index.html" class="language-link">Switch to English</a>
+    </header>
 
-  <header>
-    <h1>Shengboのポートフォリオ</h1>
-    <nav>
-      <a href="#about">自己紹介</a>
-      <a href="#skills">スキル</a>
-      <a href="#projects">プロジェクト</a>
-      <a href="#contact">連絡先</a>
-      <!-- ここには言語リンクは置かない -->
-    </nav>
-    <!-- 言語リンクを右上に配置 -->
-    <a href="index.html" class="language-link">Switch to English</a>
-  </header>
-
-<section id="about" class="about">
-  <h2>自己紹介</h2>
-  <!-- 画像を追加 -->
-  <img src="my-photo.jpg" alt="Shengbo Wangの写真" class="profile-photo">
-  <p>こんにちは！私は日本の早稲田大学の学生、王ケイ博です。2022年9月からIT技術の学習に本格的に取り組み、興味のある幅広い分野を探求してきました。時間が経つにつれて、特にWebバックエンド開発とネットワークセキュリティに焦点を当てるようになりました。現在、Go、Next.js、認証、マイクロサービスにおける専門知識を深め、堅牢でスケーラブルなWebアプリケーションを構築することに力を注いでいます。</p>
-
-  <!-- 学歴セクション -->
-  <h2>学歴</h2>
-  <div class="education-item">
-    <h3>早稲田大学, 東京, 日本</h3>
-    <p class="degree">修士課程, 電気・情報生命専攻, 先進理工学研究科</p>
-    <p class="dates">2024年4月 - 2026年3月</p>    
-  </div>
-  <div class="education-item">
-    <h3>早稲田大学, 東京, 日本</h3>
-    <p class="degree">学士課程, 電気・情報生命工学科, 先進理工学部</p>
-    <p class="dates">2020年4月 - 2024年3月</p>   
-  </div>
-
-  <!-- 趣味セクション -->
-  <h2>趣味</h2>
-  <p>私は様々な文化を探索し、海外旅行を楽しんでいます。これまでに訪れた国にはフランスやインドネシアがあります。空いた時間には、個人のテックプロジェクトに取り組んだり、ソフトウェアアーキテクチャについての本を読んだり、新しいプログラミング言語を学んだりするのも好きです。</p>
-</section>
-
-<section id="skills" class="skills">
-  <h2>スキル</h2>
-
-  <div class="skills-category">
-    <h3>言語スキル</h3>
-    <p><strong>レベル:</strong></p>
-    <div class="skills-list">
-      <div class="skill">中国語: ネイティブレベル</div>
-      <div class="skill">日本語: ネイティブレベル</div>
-      <div class="skill">英語: 会話レベル</div>
-    </div>
-  </div>
-  
-  <!-- プログラミング言語 -->
-  <div class="skills-category">
-    <h3>プログラミング言語</h3>
-    <p><strong>熟練:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Python</div>
-      <div class="skill">Ruby</div>
-      <div class="skill">Go</div>
-    </div>
-    <p><strong>経験あり:</strong></p>
-    <div class="skills-list">
-      <div class="skill">TypeScript</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">C#</div>
-    </div>
-    <p><strong>基礎知識あり:</strong></p>
-    <div class="skills-list">
-      <div class="skill">C</div>
-      <div class="skill">SQL</div>
-      <div class="skill">R</div>
-      <div class="skill">Matlab</div>
-    </div>
-  </div>
-  
-  <!-- テクノロジー -->
-  <div class="skills-category">
-    <h3>テクノロジー</h3>
-    <p><strong>フレームワーク:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Ruby on Rails</div>
-      <div class="skill">Flask</div>
-      <div class="skill">Express</div>
-      <div class="skill">Vue.js</div>
-      <div class="skill">React</div>
-      <div class="skill">Next.js</div>
-      <div class="skill">.NET Framework</div>
-      <div class="skill">TensorFlow</div>
-      <div class="skill">PyTorch</div>
-    </div>
-    <p><strong>UI フレームワーク:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Bootstrap</div>
-      <div class="skill">Material-UI</div>
-    </div>
-    <p><strong>アーキテクチャ:</strong></p>
-    <div class="skills-list">
-      <div class="skill">マイクロサービス</div>
-    </div>
-    <p><strong>データベース:</strong></p>
-    <div class="skills-list">
-      <div class="skill">MySQL</div>
-      <div class="skill">PostgreSQL</div>
-      <div class="skill">MongoDB</div>
-      <div class="skill">SQLite</div>
-    </div>
-    <p><strong>コンテナ化とオーケストレーション:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Docker</div>
-      <div class="skill">Docker Compose</div>
-      <div class="skill">Kubernetes</div>
-    </div>
-    <p><strong>バージョン管理:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Git</div>
-      <div class="skill">GitHub</div>
-    </div>
-    <p><strong>オペレーティングシステム:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Linux</div>
-    </div>
-    <p><strong>テストフレームワーク:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Jest</div>
-      <div class="skill">Runn</div>
-      <div class="skill">RSpec</div>
-    </div>
-  </div>
-
-  <!-- セキュリティ -->
-  <div class="skills-category">
-    <h3>セキュリティ</h3>
-    
-    <!-- ツールと技術 -->
-    <p><strong>ツールと技術:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Prometheus & Grafana</div>
-      <div class="skill">pfSense</div>
-      <div class="skill">OpenVpn</div>
-      <div class="skill">OpenID Connect</div>
-    </div>
-    
-    <!-- 概念 -->
-    <p><strong>概念:</strong></p>
-    <div class="skills-list">
-      <div class="skill">ネットワークセキュリティ</div>
-      <div class="skill">VPN構成</div>
-      <div class="skill">二要素認証</div>
-      <div class="skill">HTTPS通信の実装</div>
-    </div>
-  </div>
-
-  <!-- 資格 -->
-  <div class="skills-category">
-    <h3>資格</h3>
-    <div class="skills-list">
-      <div class="skill">日本語能力試験N1合格 (2024)</div>
-      <div class="skill">応用情報技術者試験合格 (2023)</div>
-      <div class="skill">基本情報技術者試験合格 (2022)</div>
-    </div>
-  </div>
-
-  <div class="skills-category">
-    <h3>イベントなど</h3>
-    <div class="skills-list">
-      <div class="skill">IPA主催のセキュリティミニキャンプ山梨2024に参加</div>
-    </div>
-  </div>
-
-</section>
-
-<section id="projects" class="projects">
-  <h2>プロジェクト</h2>
-  <!-- プロフェッショナルプロジェクト（パートタイム） -->
-  <div class="project-category">
-    <h3>プロフェッショナルプロジェクト（パートタイム）</h3>
-    
-    <div class="project-item">
-      <h4>株式会社CUUSOO SYSTEMでのフルスタックエンジニア (東京, JP) — 2023年5月 - 現在</h4>
+    <section id="about" class="about">
+      <h2>自己紹介</h2>
+      <!-- 画像を追加 -->
+      <img src="my-photo.jpg" alt="Shengbo Wangの写真" class="profile-photo" />
       <p>
-        パートタイムのフルスタックエンジニアとして、ユーザーのエンゲージメントを向上し、ユーザーベースを拡大するプロジェクトに携わっています。Ruby（Ruby on Rails）、JavaScript（React、Vue.js）、Python、Docker、MySQLなどの技術を使用して、新機能の開発や既存機能の改善を行っています。以下は私の主な貢献のハイライトです:
+        こんにちは！私は日本の早稲田大学の学生、王ケイ博です。2022年9月からIT技術の学習に本格的に取り組み、興味のある幅広い分野を探求してきました。時間が経つにつれて、特にWebバックエンド開発とネットワークセキュリティに焦点を当てるようになりました。現在、Go、Next.js、認証、マイクロサービスにおける専門知識を深め、堅牢でスケーラブルなWebアプリケーションを構築することに力を注いでいます。
       </p>
-      <ul>
-        <li>
-          <strong>二要素認証の実装:</strong> ユーザーの信頼とセキュリティを向上させるため、RubyとRuby on Railsを使用して二要素認証（2FA）システムを実装しました。認証コードは、SecureRandomなどの暗号的に安全な乱数生成アルゴリズムを使用して生成され、堅牢なセキュリティ基準を確保しました。
-        </li>
-        <li>
-          <strong>コメントへのリプライ機能の開発:</strong> ユーザー成長戦略の一環として、既存のコメントシステムにリプライ機能を追加しました。高負荷のサーバーを考慮し、新しいテーブルを追加する代わりに、コメントテーブル内でフラグを設定してコメントとリプライを区別することで、データベースの効率を維持しました。
-        </li>
-        <li>
-          <strong>コメント通知設定システムの実装:</strong> ユーザーに関連記事のコメントがされた際に通知する機能を実装していましたが、すべてのユーザーに毎回通知が送られるのは不要と判断しました。そのため、ユーザーが通知の有無を設定できるように改善しました。この実装には、RubyとRuby on Railsを使用しています。また、共通する設定部分が多いため、親クラスを作成し、それを継承する形で実装を行いました。さらに、テストケースについては、端末ごとの考慮が必要であるため、それに基づいたテストを実施しました。
-        </li>
-        <li>
-          <strong>企業情報がマップ上に表示されるシステムの実装:</strong> エリア内の各企業の所在地を視覚的にわかりやすくするため、企業情報をマップ上に表示するシステムを実装しました。また、ユーザーが自分の企業の位置情報を入力して保存できるように、企業の位置情報を入力する画面と、それをバックエンドに送信して保存するロジックを実装しました。このシステムの実装には、Vue.jsとRuby on Railsを使用しました。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>早稲田大学でのインフラエンジニア (東京, JP) — 2023年4月 - 現在</h4>
-      <p>
-        学部4年生の時、応用情報技術者試験を勉強する中でネットワークとセキュリティに強い興味を持つようになり、実践的な経験を得るために研究室のサーバー管理チームに参加しました。修士1年の春にはリーダーを務めました。主な担当業務には、研究用のGPUの組み立てと保守、研究室ネットワークインフラの構築と管理が含まれます。主な成果は以下の通りです:
-      </p>
-      <ul>
-        <li>
-          <strong>セキュリティプロトコルのアップグレードとサーバーの再構築:</strong> セキュリティを向上させるため、研究室のサーバー通信をHTTPからHTTPSにアップグレードし、自己署名証明書を発行しました。また、古いPrometheusモニタリングサーバーをゼロから再構築し、Kubernetesを使用してHTTPS通信を簡単にセットアップしました。さらに、古いpfSense VPNサーバーも再構築し、冗長性を実装しました。
-        </li>
-        <li>
-          <strong>安全なゲストWi-Fiの確立とネットワークセグメンテーション:</strong> 訪問者が大学のWi-Fiのみを使用していたため、通信速度が遅くなることを考慮し、研究室専用のゲストWi-Fiを設定しました。また、ゲストが内部ネットワークにアクセスできないようにファイアウォールを設定しました。
-        </li>
-        <li>
-          <strong>ストレージ制限の解決とログ保持ソリューションの実装:</strong> 「研究環境のスペース不足」という問題を解決するため、SSDを取り付けてストレージ容量を拡張しました。また、研究のためにログを保持する重要性を考慮し、MLflowサーバーのセットアップを進めています。
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <!-- プライベートチームプロジェクト -->
-  <div class="project-category">
-    <h3>プライベートチームプロジェクト</h3>
-    <div class="project-item">
-      <h4>フルスタックエンジニア（チームハッカソン） — 2024年8月 - 現在</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/EC-sister" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
+
+      <!-- 学歴セクション -->
+      <h2>学歴</h2>
+      <div class="education-item">
+        <h3>早稲田大学, 東京, 日本</h3>
+        <p class="degree">修士課程, 電気・情報生命専攻, 先進理工学研究科</p>
+        <p class="dates">2024年4月 - 2026年3月</p>
       </div>
-      <p>
-        オンラインショッピングサイトでのユーザーレビューの問題を解決するため、ユーザーに質の高いレビューを書くインセンティブを与えるEコマースプラットフォームを開発しました。ユーザーはレビューの「いいね」の数に基づいて報酬を受け取り、Amazonや楽天などの好みのサイトに移動できる検索フィルタリングシステムも備える予定です。このプロジェクトでは、Next.js、JavaScript、Python、Flask、PostgreSQL、Dockerを使用しました。
-      </p>
-      <ul>
-        <li>
-          <strong>レビュー報酬システムの実装:</strong> ユーザーエンゲージメントを向上させるため、レビューを「いいね」しないと購入ページにアクセスできないシステムを実装し、ユーザーに考慮されたレビューを書くよう促しました。レビューの著者は、レビューに付けられた「いいね」の数に基づいて報酬を受け取ります。
-        </li>
-        <li>
-          <strong>データベース構造と最適化:</strong> 各ECサイトからの記事、ユーザー、製品、アイテムを含むテーブルに外部キーを設定し、検索機能の効率性を確保し、プラットフォーム全体のデータの一貫性を保ちました。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>ゲーム開発チームリーダー — 2023年3月 - 2023年10月</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/WaseNinja" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
+      <div class="education-item">
+        <h3>早稲田大学, 東京, 日本</h3>
+        <p class="degree">学士課程, 電気・情報生命工学科, 先進理工学部</p>
+        <p class="dates">2020年4月 - 2024年3月</p>
       </div>
-      <p>
-        チームリーダーとして、C#を使用して「小学生が楽しくプログラミングを学べる忍者迷路ゲーム」を作成するために8人の開発チームを率いました。このプロジェクトの目的は、子供たちにプログラミングへの興味を喚起し、エンジニアの人材不足の問題に対処することでした。ゲームは学園祭で発表され、1,000人以上の参加者から好評を得、アンケート結果では約90％の子供たちがプログラミングに興味を持ったことが示されました。
-      </p>
-      <ul>
-        <li>
-          <strong>ゲームデザインと開発:</strong> 教育的なプログラミング要素とゲームの楽しさのバランスに注力しました。forループや再帰などのプログラミング概念を取り入れた迷路を設計し、徐々に難易度を上げていきました。小学生が親しみやすいように、オリジナルストーリーや可愛らしい動物キャラクターを追加しました。
-        </li>
-        <li>
-          <strong>チームマネジメントと協力:</strong> チームのアイデアが異なる状況において、異なる視点を理解し、建設的な議論を促進することに重点を置きました。メンバーの意見を正確に理解するために積極的に質問をし、具体的なデータを使用して明確で理解しやすい意思決定を行いました。
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <!-- プライベートパーソナルプロジェクト -->
-  <div class="project-category">
-    <h3>プライベートパーソナルプロジェクト</h3>
-    <div class="project-item">
-      <h4>GoでOAuth2.0とOIDCの実装 — 2024年9月 – 現在</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Auth-go" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
-      </div>
-      <p>
-        Goについてさらに学びたいと考え、特にセキュリティの認証に興味を持っています。そのため、GoでOAuth 2.0とOpenID Connect(OIDC)を実装することに決めました。このプログラムの目的は、ユーザーがGoogleで認証を行い、その認証情報を使ってGoogle Photosに写真をアップロードすることです。現在はOAuth 2.0の実装が完了しており、次のステップとしてOIDCの実装とフロントエンドデザインの取り込みを進めたいと考えています。
-      </p>
-      <ul>
-        <li>
-          <strong>HTTPエンドポイントの整理された構成:</strong> /start エンドポイントでユーザーをGoogleの認証ページにリダイレクトし、/callback エンドポイントで認証後の処理（トークン取得、写真のアップロード）を行うという明確な流れが保たれています。
-        </li>
-        <li>
-          <strong>Google Photos APIの使用:</strong> uploadPhoto() 関数では、Google Photos APIのuploadsエンドポイントに写真をアップロードし、uploadTokenを取得しています。このトークンを使って、次のリクエストで写真をGoogle Photosライブラリに追加します。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>マイクロサービスの実装 — 2024年7月 – 現在</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Multi-Service-Apps" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
-      </div>
-      <p>
-        モノリシックなアーキテクチャ以外の知識を拡充するため、マイクロサービスを使用したチケット販売機能の実装に取り組んでいます。このプロジェクトは現在進行中であり、サービスのモジュール性とスケーラビリティを向上させることに焦点を当てています。
-      </p>
-      <ul>
-        <li>
-          <strong>バックエンド開発とサービス間通信:</strong> TypeScriptをバックエンドで使用し、共通機能を再利用可能なnpmパッケージにまとめ、サービス間のシームレスな通信を確保しました。
-        </li>
-        <li>
-          <strong>コンテナ化とオーケストレーション:</strong> 各サービスの管理と自動化のためにDockerとKubernetesを採用し、システム全体をGoogle Cloud Platform（GCP）にデプロイしました。
-        </li>
-        <li>
-          <strong>テストとフロントエンド開発:</strong> システムが正しく機能することを確認するために、テストケースを慎重に設計し、JestとSupertestを使用してテストファイルを作成しました。フロントエンドには、複数の画面を管理する複雑さのために、Next.jsを選びました。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>ホテル予約サイト — 2024年4月 - 2024年6月</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Go-App" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
-      </div>
-      <p>
-        長期インターンシップでは主にRubyを使用して開発を行っていましたが、Rubyとは異なる非オブジェクト指向の言語であるGoに興味を持ち、学びたいと考えました。そのため、Goの習得を目的にUdemyの講座を参考にしながら、ホテル予約サイトを一から開発しました。このプロジェクトでは、データベースとして高性能で信頼性の高いPostgreSQLを選択し、効率的なデータ管理と高速なクエリ処理を実現しました。
-      </p>
-      <ul>
-        <li>
-          <strong>Goのインターフェースの活用:</strong> Goのインターフェースを活用することで、実際のデプロイとテストの両方で同じコードベースを同じファイルで使用することができ、開発プロセスを効率化しました。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>神経衰弱ゲーム — 2024年4月</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/memory_game" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
-      </div>
-      <p>
-        バックエンド開発で確固たる基礎を築いた後、Webシステムの全体像を把握するためにフロントエンドの知識も拡張することにしました。Reactを使用してメモリーマッチングゲームを作成しました。
-      </p>
-      <ul>
-        <li>
-          <strong>動的UI更新のためのReactの選択:</strong> ReactのuseStateなどの機能を使用すると、カードがクリックされたときに状態変化を簡単に管理し、動的な画面更新を実装することができました。
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>投稿共有サイト — 2023年5月 – 2023年8月</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Rails-lesson" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> GitHubリポジトリを見る
-          </button>
-        </a>
-      </div>
-      <p>
-        Web開発に対する興味が高まったため、セットアップが容易なことで知られるRuby on Railsを学びました。Ruby on Railsを使用して投稿共有サイトを開発し、Web開発スキルを向上させました。
-      </p>
-      <ul>
-        <li>
-          <strong>MVCとセッション管理の実装:</strong> MVCモデルを効果的に利用して、ログインやログアウトなどのセッション関連の機能を実装しました。また、投稿と記事の表示、フォロワーシステムなどの機能も実装しました。
-        </li>
-      </ul>
-    </div>
-  </div>
 
-</section>
+      <!-- 趣味セクション -->
+      <h2>趣味</h2>
+      <p>
+        私は様々な文化を探索し、海外旅行を楽しんでいます。これまでに訪れた国にはフランスやインドネシアがあります。空いた時間には、個人のテックプロジェクトに取り組んだり、ソフトウェアアーキテクチャについての本を読んだり、新しいプログラミング言語を学んだりするのも好きです。
+      </p>
+    </section>
 
-<section id="contact" class="contact">
-  <h2>連絡先</h2>
-  <p>ご連絡は以下のメールアドレスまでお気軽にどうぞ。</p>
-  <p>Email: shengbo122519@gmail.com</p>
-  <p>Github: <a href="https://github.com/KeihakuOh" target="_blank">KeihakuOh
+    <section id="skills" class="skills">
+      <h2>スキル</h2>
+
+      <div class="skills-category">
+        <h3>言語スキル</h3>
+        <p><strong>レベル:</strong></p>
+        <div class="skills-list">
+          <div class="skill">中国語: ネイティブレベル</div>
+          <div class="skill">日本語: ネイティブレベル</div>
+          <div class="skill">英語: 会話レベル</div>
+        </div>
+      </div>
+
+      <!-- プログラミング言語 -->
+      <div class="skills-category">
+        <h3>プログラミング言語</h3>
+        <p><strong>熟練:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Python</div>
+          <div class="skill">Ruby</div>
+          <div class="skill">Go</div>
+        </div>
+        <p><strong>経験あり:</strong></p>
+        <div class="skills-list">
+          <div class="skill">TypeScript</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">C#</div>
+        </div>
+        <p><strong>基礎知識あり:</strong></p>
+        <div class="skills-list">
+          <div class="skill">C</div>
+          <div class="skill">SQL</div>
+          <div class="skill">R</div>
+          <div class="skill">Matlab</div>
+        </div>
+      </div>
+
+      <!-- テクノロジー -->
+      <div class="skills-category">
+        <h3>テクノロジー</h3>
+        <p><strong>フレームワーク:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Ruby on Rails</div>
+          <div class="skill">Flask</div>
+          <div class="skill">Express</div>
+          <div class="skill">Vue.js</div>
+          <div class="skill">React</div>
+          <div class="skill">Next.js</div>
+          <div class="skill">.NET Framework</div>
+          <div class="skill">TensorFlow</div>
+          <div class="skill">PyTorch</div>
+        </div>
+        <p><strong>UI フレームワーク:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Bootstrap</div>
+          <div class="skill">Material-UI</div>
+        </div>
+        <p><strong>APIスタイル:</strong></p>
+        <div class="skills-list">
+          <div class="skill">REST</div>
+          <div class="skill">GraphQL</div>
+        </div>
+        <p><strong>アーキテクチャ:</strong></p>
+        <div class="skills-list">
+          <div class="skill">マイクロサービス</div>
+        </div>
+        <p><strong>データベース:</strong></p>
+        <div class="skills-list">
+          <div class="skill">MySQL</div>
+          <div class="skill">PostgreSQL</div>
+          <div class="skill">MongoDB</div>
+          <div class="skill">SQLite</div>
+        </div>
+        <p><strong>コンテナ化とオーケストレーション:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Docker</div>
+          <div class="skill">Docker Compose</div>
+          <div class="skill">Kubernetes</div>
+        </div>
+        <p><strong>バージョン管理:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Git</div>
+          <div class="skill">GitHub</div>
+        </div>
+        <p><strong>オペレーティングシステム:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Linux</div>
+        </div>
+        <p><strong>テストフレームワーク:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Jest</div>
+          <div class="skill">Runn</div>
+          <div class="skill">RSpec</div>
+        </div>
+      </div>
+
+      <!-- セキュリティ -->
+      <div class="skills-category">
+        <h3>セキュリティ</h3>
+
+        <!-- ツールと技術 -->
+        <p><strong>ツールと技術:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Prometheus & Grafana</div>
+          <div class="skill">pfSense</div>
+          <div class="skill">OpenVpn</div>
+          <div class="skill">OpenID Connect</div>
+        </div>
+
+        <!-- 概念 -->
+        <p><strong>概念:</strong></p>
+        <div class="skills-list">
+          <div class="skill">ネットワークセキュリティ</div>
+          <div class="skill">VPN構成</div>
+          <div class="skill">二要素認証</div>
+          <div class="skill">HTTPS通信の実装</div>
+        </div>
+      </div>
+
+      <!-- 資格 -->
+      <div class="skills-category">
+        <h3>資格</h3>
+        <div class="skills-list">
+          <div class="skill">日本語能力試験N1合格 (2024)</div>
+          <div class="skill">応用情報技術者試験合格 (2023)</div>
+          <div class="skill">基本情報技術者試験合格 (2022)</div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>イベントなど</h3>
+        <div class="skills-list">
+          <div class="skill">
+            IPA主催のセキュリティミニキャンプ山梨2024に参加
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>プロジェクト</h2>
+      <!-- プロフェッショナルプロジェクト（パートタイム） -->
+      <div class="project-category">
+        <h3>プロフェッショナルプロジェクト（パートタイム）</h3>
+
+        <div class="project-item">
+          <h4>
+            株式会社CUUSOO SYSTEMでのフルスタックエンジニア (東京, JP) —
+            2023年5月 - 現在
+          </h4>
+          <p>
+            パートタイムのフルスタックエンジニアとして、ユーザーのエンゲージメントを向上し、ユーザーベースを拡大するプロジェクトに携わっています。Ruby（Ruby
+            on
+            Rails）、JavaScript（React、Vue.js）、Python、Docker、MySQLなどの技術を使用して、新機能の開発や既存機能の改善を行っています。以下は私の主な貢献のハイライトです:
+          </p>
+          <ul>
+            <li>
+              <strong>二要素認証の実装:</strong>
+              ユーザーの信頼とセキュリティを向上させるため、RubyとRuby on
+              Railsを使用して二要素認証（2FA）システムを実装しました。認証コードは、SecureRandomなどの暗号的に安全な乱数生成アルゴリズムを使用して生成され、堅牢なセキュリティ基準を確保しました。
+            </li>
+            <li>
+              <strong>コメントへのリプライ機能の開発:</strong>
+              ユーザー成長戦略の一環として、既存のコメントシステムにリプライ機能を追加しました。高負荷のサーバーを考慮し、新しいテーブルを追加する代わりに、コメントテーブル内でフラグを設定してコメントとリプライを区別することで、データベースの効率を維持しました。
+            </li>
+            <li>
+              <strong>コメント通知設定システムの実装:</strong>
+              ユーザーに関連記事のコメントがされた際に通知する機能を実装していましたが、すべてのユーザーに毎回通知が送られるのは不要と判断しました。そのため、ユーザーが通知の有無を設定できるように改善しました。この実装には、RubyとRuby
+              on
+              Railsを使用しています。また、共通する設定部分が多いため、親クラスを作成し、それを継承する形で実装を行いました。さらに、テストケースについては、端末ごとの考慮が必要であるため、それに基づいたテストを実施しました。
+            </li>
+            <li>
+              <strong>企業情報がマップ上に表示されるシステムの実装:</strong>
+              エリア内の各企業の所在地を視覚的にわかりやすくするため、企業情報をマップ上に表示するシステムを実装しました。また、ユーザーが自分の企業の位置情報を入力して保存できるように、企業の位置情報を入力する画面と、それをバックエンドに送信して保存するロジックを実装しました。このシステムの実装には、Vue.jsとRuby
+              on Railsを使用しました。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>
+            早稲田大学でのインフラエンジニア (東京, JP) — 2023年4月 - 現在
+          </h4>
+          <p>
+            学部4年生の時、応用情報技術者試験を勉強する中でネットワークとセキュリティに強い興味を持つようになり、実践的な経験を得るために研究室のサーバー管理チームに参加しました。修士1年の春にはリーダーを務めました。主な担当業務には、研究用のGPUの組み立てと保守、研究室ネットワークインフラの構築と管理が含まれます。主な成果は以下の通りです:
+          </p>
+          <ul>
+            <li>
+              <strong
+                >セキュリティプロトコルのアップグレードとサーバーの再構築:</strong
+              >
+              セキュリティを向上させるため、研究室のサーバー通信をHTTPからHTTPSにアップグレードし、自己署名証明書を発行しました。また、古いPrometheusモニタリングサーバーをゼロから再構築し、Kubernetesを使用してHTTPS通信を簡単にセットアップしました。さらに、古いpfSense
+              VPNサーバーも再構築し、冗長性を実装しました。
+            </li>
+            <li>
+              <strong
+                >安全なゲストWi-Fiの確立とネットワークセグメンテーション:</strong
+              >
+              訪問者が大学のWi-Fiのみを使用していたため、通信速度が遅くなることを考慮し、研究室専用のゲストWi-Fiを設定しました。また、ゲストが内部ネットワークにアクセスできないようにファイアウォールを設定しました。
+            </li>
+            <li>
+              <strong
+                >ストレージ制限の解決とログ保持ソリューションの実装:</strong
+              >
+              「研究環境のスペース不足」という問題を解決するため、SSDを取り付けてストレージ容量を拡張しました。また、研究のためにログを保持する重要性を考慮し、MLflowサーバーのセットアップを進めています。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- プライベートチームプロジェクト -->
+      <div class="project-category">
+        <h3>プライベートチームプロジェクト</h3>
+        <div class="project-item">
+          <h4>フルスタックエンジニア（チームハッカソン） — 2024年8月 - 現在</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/EC-sister"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            オンラインショッピングサイトでのユーザーレビューの問題を解決するため、ユーザーに質の高いレビューを書くインセンティブを与えるEコマースプラットフォームを開発しました。ユーザーはレビューの「いいね」の数に基づいて報酬を受け取り、Amazonや楽天などの好みのサイトに移動できる検索フィルタリングシステムも備える予定です。このプロジェクトでは、Next.js、JavaScript、Python、Flask、PostgreSQL、Dockerを使用しました。
+          </p>
+          <ul>
+            <li>
+              <strong>レビュー報酬システムの実装:</strong>
+              ユーザーエンゲージメントを向上させるため、レビューを「いいね」しないと購入ページにアクセスできないシステムを実装し、ユーザーに考慮されたレビューを書くよう促しました。レビューの著者は、レビューに付けられた「いいね」の数に基づいて報酬を受け取ります。
+            </li>
+            <li>
+              <strong>データベース構造と最適化:</strong>
+              各ECサイトからの記事、ユーザー、製品、アイテムを含むテーブルに外部キーを設定し、検索機能の効率性を確保し、プラットフォーム全体のデータの一貫性を保ちました。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>ゲーム開発チームリーダー — 2023年3月 - 2023年10月</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/WaseNinja"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            チームリーダーとして、C#を使用して「小学生が楽しくプログラミングを学べる忍者迷路ゲーム」を作成するために8人の開発チームを率いました。このプロジェクトの目的は、子供たちにプログラミングへの興味を喚起し、エンジニアの人材不足の問題に対処することでした。ゲームは学園祭で発表され、1,000人以上の参加者から好評を得、アンケート結果では約90％の子供たちがプログラミングに興味を持ったことが示されました。
+          </p>
+          <ul>
+            <li>
+              <strong>ゲームデザインと開発:</strong>
+              教育的なプログラミング要素とゲームの楽しさのバランスに注力しました。forループや再帰などのプログラミング概念を取り入れた迷路を設計し、徐々に難易度を上げていきました。小学生が親しみやすいように、オリジナルストーリーや可愛らしい動物キャラクターを追加しました。
+            </li>
+            <li>
+              <strong>ユーザ目線の工夫:</strong>
+              子供がPC操作に不慣れである点に着目し、誘導を追加したり、ドラッグ&ドロップ機能を強化するなどの工夫を施しました。
+            </li>
+            <li>
+              <strong>チームマネジメントと協力:</strong>
+              チームのアイデアが異なる状況において、異なる視点を理解し、建設的な議論を促進することに重点を置きました。メンバーの意見を正確に理解するために積極的に質問をし、具体的なデータを使用して明確で理解しやすい意思決定を行いました。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- プライベートパーソナルプロジェクト -->
+      <div class="project-category">
+        <h3>プライベートパーソナルプロジェクト</h3>
+        <div class="project-item">
+          <h4>GoでOAuth2.0とOIDCの実装 — 2024年9月 – 現在</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Auth-go"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            Goについてさらに学びたいと考え、特にセキュリティの認証に興味を持っています。そのため、GoでOAuth
+            2.0とOpenID
+            Connect(OIDC)を実装することに決めました。このプログラムの目的は、ユーザーがGoogleで認証を行い、その認証情報を使ってGoogle
+            Photosに写真をアップロードすることです。現在はOAuth
+            2.0の実装が完了しており、次のステップとしてOIDCの実装とフロントエンドデザインの取り込みを進めたいと考えています。
+          </p>
+          <ul>
+            <li>
+              <strong>HTTPエンドポイントの整理された構成:</strong> /start
+              エンドポイントでユーザーをGoogleの認証ページにリダイレクトし、/callback
+              エンドポイントで認証後の処理（トークン取得、写真のアップロード）を行うという明確な流れが保たれています。
+            </li>
+            <li>
+              <strong>Google Photos APIの使用:</strong> uploadPhoto()
+              関数では、Google Photos
+              APIのuploadsエンドポイントに写真をアップロードし、uploadTokenを取得しています。このトークンを使って、次のリクエストで写真をGoogle
+              Photosライブラリに追加します。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>マイクロサービスの実装 — 2024年7月 – 9月</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Multi-Service-Apps"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            モノリシックなアーキテクチャ以外の知識を拡充するため、マイクロサービスを使用したチケット販売機能の実装に取り組んでいます。このプロジェクトは現在進行中であり、サービスのモジュール性とスケーラビリティを向上させることに焦点を当てています。
+          </p>
+          <ul>
+            <li>
+              <strong>バックエンド開発とサービス間通信:</strong>
+              TypeScriptをバックエンドで使用し、共通機能を再利用可能なnpmパッケージにまとめ、サービス間のシームレスな通信を確保しました。
+            </li>
+            <li>
+              <strong>コンテナ化とオーケストレーション:</strong>
+              各サービスの管理と自動化のためにDockerとKubernetesを採用しました。また、学習の一環として、システム全体をGoogle
+              Cloud Platform（GCP）にデプロイしました。
+            </li>
+            <li>
+              <strong>テストとフロントエンド開発:</strong>
+              システムが正しく機能することを確認するために、テストケースを慎重に設計し、JestとSupertestを使用してテストファイルを作成しました。フロントエンドには、複数の画面を管理する複雑さのために、Next.jsを選びました。
+            </li>
+            <li>
+              <strong>認証について:</strong>
+              認証サービスへの依存を減らし、スケーラビリティとパフォーマンスを向上させるため、JWTトークンを利用して各サービス内でユーザー情報を確認する方法を採用しました。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>ホテル予約サイト — 2024年4月 - 2024年6月</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Go-App"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            長期インターンシップでは主にRubyを使用して開発を行っていましたが、Rubyとは異なる非オブジェクト指向の言語であるGoに興味を持ち、学びたいと考えました。そのため、Goの習得を目的にUdemyの講座を参考にしながら、ホテル予約サイトを一から開発しました。このプロジェクトでは、データベースとして高性能で信頼性の高いPostgreSQLを選択し、効率的なデータ管理と高速なクエリ処理を実現しました。
+          </p>
+          <ul>
+            <li>
+              <strong>Goのインターフェースの活用:</strong>
+              Goのインターフェースを活用することで、実際のデプロイとテストの両方で同じコードベースを同じファイルで使用することができ、開発プロセスを効率化しました。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>神経衰弱ゲーム — 2024年4月</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/memory_game"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            バックエンド開発で確固たる基礎を築いた後、Webシステムの全体像を把握するためにフロントエンドの知識も拡張することにしました。Reactを使用してメモリーマッチングゲームを作成しました。
+          </p>
+          <ul>
+            <li>
+              <strong>動的UI更新のためのReactの選択:</strong>
+              ReactのuseStateなどの機能を使用すると、カードがクリックされたときに状態変化を簡単に管理し、動的な画面更新を実装することができました。
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>投稿共有サイト — 2023年5月 – 2023年8月</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Rails-lesson"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> GitHubリポジトリを見る
+              </button>
+            </a>
+          </div>
+          <p>
+            Web開発に対する興味が高まったため、セットアップが容易なことで知られるRuby
+            on Railsを学びました。Ruby on
+            Railsを使用して投稿共有サイトを開発し、Web開発スキルを向上させました。
+          </p>
+          <ul>
+            <li>
+              <strong>MVCとセッション管理の実装:</strong>
+              MVCモデルを効果的に利用して、ログインやログアウトなどのセッション関連の機能を実装しました。また、投稿と記事の表示、フォロワーシステムなどの機能も実装しました。
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>連絡先</h2>
+      <p>ご連絡は以下のメールアドレスまでお気軽にどうぞ。</p>
+      <p>Email: shengbo122519@gmail.com</p>
+      <p>
+        Github:
+        <a href="https://github.com/KeihakuOh" target="_blank">KeihakuOh </a>
+      </p>
+    </section>
+  </body>
+</html>

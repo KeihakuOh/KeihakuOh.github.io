@@ -1,659 +1,893 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shengbo's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f5f5f5;
-      color: #333;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shengbo's Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        color: #333;
+      }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-    }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+      }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
 
-    nav {
-      text-align: center;
-      margin-top: 20px;
-    }
+      nav {
+        text-align: center;
+        margin-top: 20px;
+      }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-    }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+      }
 
-    .language-link {
-      position: absolute; /* 絶対配置で右上に配置 */
-      top: 10px; /* 上端からの位置を設定 */
-      right: 20px; /* 右端からの位置を設定 */
-      text-decoration: none; /* 下線を削除 */
-      font-weight: bold; /* 太字にする */
-      color: white; /* 文字色を白に設定 */
-      font-size: 1.2em; /* フォントサイズを大きくする */
-      border: 2px solid white; /* 白い枠線を追加 */
-      padding: 5px 10px; /* リンクにパディングを追加 */
-      border-radius: 5px; /* 角を少し丸める */
-      background-color: transparent; /* 背景色を透明にする */
-    }
+      .language-link {
+        position: absolute; /* 絶対配置で右上に配置 */
+        top: 10px; /* 上端からの位置を設定 */
+        right: 20px; /* 右端からの位置を設定 */
+        text-decoration: none; /* 下線を削除 */
+        font-weight: bold; /* 太字にする */
+        color: white; /* 文字色を白に設定 */
+        font-size: 1.2em; /* フォントサイズを大きくする */
+        border: 2px solid white; /* 白い枠線を追加 */
+        padding: 5px 10px; /* リンクにパディングを追加 */
+        border-radius: 5px; /* 角を少し丸める */
+        background-color: transparent; /* 背景色を透明にする */
+      }
 
-    section {
-      padding: 60px 0;
-      text-align: center;
-    }
+      section {
+        padding: 60px 0;
+        text-align: center;
+      }
 
-    section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .about h2 {
-      font-size: 1.8rem;
-      margin-top: 30px;
-      color: #333;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
+      section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .about h2 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+        color: #333;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+      }
 
-    .education-item {
-      margin-bottom: 20px;
-    }
+      .education-item {
+        margin-bottom: 20px;
+      }
 
-    .education-item h3 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: #333;
-    }
+      .education-item h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+      }
 
-    .education-item p {
-      margin: 5px 0;
-      color: #666;
-      font-size: 1.1rem;
-    }
+      .education-item p {
+        margin: 5px 0;
+        color: #666;
+        font-size: 1.1rem;
+      }
 
-    .degree {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 5px;
-      color: #333;
-    }
+      .degree {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #333;
+      }
 
-    .dates {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 20px;
-    }
+      .dates {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
 
-    h3 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
+      h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
 
+      .profile-photo {
+        width: 250px; /* 幅を大きく調整 */
+        height: 250px; /* 高さを大きく調整 */
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 影を少し強調 */
+      }
 
+      .about,
+      .skills,
+      .projects,
+      .contact {
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .profile-photo {
-      width: 250px;  /* 幅を大きく調整 */
-      height: 250px; /* 高さを大きく調整 */
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 影を少し強調 */
-    }
+      .about p,
+      .skills p,
+      .contact p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
 
-    .about, .skills, .projects, .contact {
-      background-color: #fff;
-      margin: 20px auto;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      .skills {
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .about p, .skills p, .contact p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
+      .skills h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        color: #333;
+      }
 
-    .skills {
-      background-color: #fff;
-      margin: 20px auto;
-      padding: 40px;
-      border-radius: 8px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      .skills-category {
+        margin-bottom: 30px;
+        padding: 20px;
+        border-left: 4px solid #333; /* カテゴリを視覚的に分けるための左ボーダー */
+        background-color: #f9f9f9; /* カテゴリ背景色 */
+        border-radius: 4px;
+      }
 
-    .skills h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
+      .skills-category h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
 
-    .skills-category {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-left: 4px solid #333; /* カテゴリを視覚的に分けるための左ボーダー */
-      background-color: #f9f9f9; /* カテゴリ背景色 */
-      border-radius: 4px;
-    }
+      .skills-category p {
+        margin: 10px 0;
+        color: #666;
+        font-size: 1.1rem;
+      }
 
-    .skills-category h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 15px;
-    }
+      .skills-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px; /* スキルリストのトップマージン */
+      }
 
-    .skills-category p {
-      margin: 10px 0;
-      color: #666;
-      font-size: 1.1rem;
-    }
+      .skills-list .skill {
+        background-color: #333;
+        color: #fff;
+        margin: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 1rem; /* フォントサイズを統一 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+        transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
+      }
 
-    .skills-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 10px; /* スキルリストのトップマージン */
-    }
+      .skills-list .skill:hover {
+        transform: scale(1.1); /* ホバー時の拡大 */
+      }
 
-    .skills-list .skill {
-      background-color: #333;
-      color: #fff;
-      margin: 10px;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 1rem; /* フォントサイズを統一 */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-      transition: transform 0.3s ease; /* ホバーエフェクトのためのトランジション */
-    }
+      .projects .project-item {
+        margin: 20px 0;
+        text-align: left;
+      }
 
-    .skills-list .skill:hover {
-      transform: scale(1.1); /* ホバー時の拡大 */
-    }
+      .projects .project-item h3 {
+        color: #333;
+        margin-bottom: 10px;
+      }
 
-    .projects .project-item {
-      margin: 20px 0;
-      text-align: left;
-    }
+      .projects .project-item p {
+        color: #666;
+      }
 
-    .projects .project-item h3 {
-      color: #333;
-      margin-bottom: 10px;
-    }
+      .project-category {
+        background-color: #f9f9f9; /* 背景色を淡い色に */
+        padding: 30px;
+        margin-bottom: 40px; /* 各カテゴリの間隔を広げる */
+        border-radius: 8px; /* 角を丸くする */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+      }
 
-    .projects .project-item p {
-      color: #666;
-    }
+      .project-category h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #333; /* タイトルの下にボーダーを追加 */
+        padding-bottom: 10px; /* タイトル下の余白 */
+      }
 
-    .project-category {
-      background-color: #f9f9f9; /* 背景色を淡い色に */
-      padding: 30px;
-      margin-bottom: 40px; /* 各カテゴリの間隔を広げる */
-      border-radius: 8px; /* 角を丸くする */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
-    }
+      .project-item {
+        margin-bottom: 20px; /* プロジェクト間の余白 */
+      }
 
-    .project-category h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #333; /* タイトルの下にボーダーを追加 */
-      padding-bottom: 10px; /* タイトル下の余白 */
-    }
+      .project-item h4 {
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 10px; /* プロジェクト名の下の余白 */
+      }
 
-    .project-item {
-      margin-bottom: 20px; /* プロジェクト間の余白 */
-    }
+      .project-item p {
+        color: #666;
+        font-size: 1rem;
+      }
 
-    .project-item h4 {
-      font-size: 1.4rem;
-      color: #333;
-      margin-bottom: 10px; /* プロジェクト名の下の余白 */
-    }
+      .repository-link {
+        margin-top: 15px;
+        text-align: center; /* ボタンを中央に配置 */
+      }
 
-    .project-item p {
-      color: #666;
-      font-size: 1rem;
-    }
+      .minimal-btn {
+        font-size: 1.2em; /* 少し大きめのフォントサイズ */
+        padding: 10px 20px; /* ボタンのパディングを調整 */
+        background-color: #000; /* ボタンの背景色を黒に */
+        color: #fff; /* テキストカラーを白に */
+        border: 2px solid #000; /* ボーダーを黒で設定 */
+        border-radius: 25px; /* 角を少し丸くする */
+        cursor: pointer; /* カーソルをポインターに */
+        transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
+      }
 
-    .repository-link {
-      margin-top: 15px;
-      text-align: center; /* ボタンを中央に配置 */
-    }
+      .minimal-btn:hover {
+        background-color: #fff; /* ホバー時に背景を白に */
+        color: #000; /* ホバー時にテキストを黒に */
+      }
 
-    .minimal-btn {
-      font-size: 1.2em; /* 少し大きめのフォントサイズ */
-      padding: 10px 20px; /* ボタンのパディングを調整 */
-      background-color: #000; /* ボタンの背景色を黒に */
-      color: #fff; /* テキストカラーを白に */
-      border: 2px solid #000; /* ボーダーを黒で設定 */
-      border-radius: 25px; /* 角を少し丸くする */
-      cursor: pointer; /* カーソルをポインターに */
-      transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
-    }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+      }
 
-    .minimal-btn:hover {
-      background-color: #fff; /* ホバー時に背景を白に */
-      color: #000; /* ホバー時にテキストを黒に */
-    }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Shengbo's Portfolio</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="index_jp.html" class="language-link">日本語に切り替える</a>
+    </header>
 
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    footer p {
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Shengbo's Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a href="index_jp.html" class="language-link">日本語に切り替える</a>
-</header>
-
-<section id="about" class="about">
-  <h2>About Me</h2>
-  <!-- 画像を追加 -->
-  <img src="my-photo.jpg" alt="Your Name" class="profile-photo">
-  <p>Hello! I'm Shengbo Wang, a student at Waseda University in Japan. Since September 2022, I have been deeply committed to studying IT technology, exploring a wide range of fields that interest me. Over time, I developed a particular focus on web backend development and network security. Currently, I am dedicated to expanding my expertise in Go, Next.js, authentication, and microservices to build robust and scalable web applications.</p>
-
-  <!-- Education Section within About Me -->
-  <h2>Education</h2>
-  <div class="education-item">
-    <h3>Waseda University, Tokyo, JP</h3>
-    <p class="degree">Master of Electrical Engineering and Bioscience, School of Advanced Science and Engineering</p>
-    <p class="dates">April 2024 - March 2026</p>    
-  </div>
-  <div class="education-item">
-    <h3>Waseda University, Tokyo, JP</h3>
-    <p class="degree">Bachelor of Electrical Engineering and Bioscience, School of Advanced Science and Engineering</p>
-    <p class="dates">April 2020 – March 2024</p>   
-  </div>
-
-  <!-- Hobbies Section within About Me -->
-  <h2>Hobbies</h2>
-  <p>I enjoy exploring various cultures and traveling abroad. Some of the countries I have visited include France and Indonesia. In my free time, I also like working on personal tech projects, reading books on software architecture, and learning new programming languages.</p>
-</section>
-
-
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-
-  <div class="skills-category">
-    <h3>Language Skills</h3>
-    <p><strong>Levels:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Chinese: Native proficiency</div>
-      <div class="skill">Japanese: Native proficiency</div>
-      <div class="skill">English: Conversational proficiency</div>
-    </div>
-  </div>
-  
-  <!-- Programming Languages -->
-  <div class="skills-category">
-    <h3>Programming Languages</h3>
-    <p><strong>Proficient in:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Python</div>
-      <div class="skill">Ruby</div>
-      <div class="skill">Go</div>
-    </div>
-    <p><strong>Familiar with:</strong></p>
-    <div class="skills-list">
-      <div class="skill">TypeScript</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">C#</div>
-    </div>
-    <p><strong>Experience with:</strong></p>
-    <div class="skills-list">
-      <div class="skill">C</div>
-      <div class="skill">SQL</div>
-      <div class="skill">R</div>
-    </div>
-  </div>
-  
-  <!-- Tech -->
-  <div class="skills-category">
-    <h3>Tech</h3>
-    <p><strong>Framework:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Ruby on Rails</div>
-      <div class="skill">Flask</div>
-      <div class="skill">Express</div>
-      <div class="skill">Vue.js</div>
-      <div class="skill">React</div>
-      <div class="skill">Next.js</div>
-      <div class="skill">.NET Framework</div>
-      <div class="skill">TensorFlow</div>
-      <div class="skill">PyTorch</div>
-    </div>
-    <p><strong>UI Framework:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Bootstrap</div>
-      <div class="skill">Material-UI</div>
-    </div>
-    <p><strong>Architecture:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Microservices</div>
-    </div>
-    <p><strong>Database:</strong></p>
-    <div class="skills-list">
-      <div class="skill">MySQL</div>
-      <div class="skill">PostgreSQL</div>
-      <div class="skill">MongoDB</div>
-      <div class="skill">SQLite</div>
-    </div>
-    <p><strong>Containerization & Orchestration:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Docker</div>
-      <div class="skill">Docker Compose</div>
-      <div class="skill">Kubernetes</div>
-    </div>
-    <p><strong>Version Control:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Git</div>
-      <div class="skill">GitHub</div>
-    </div>
-    <p><strong>Operating System:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Linux</div>
-    </div>
-    <p><strong>Testing Framework:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Jest</div>
-      <div class="skill">Runn</div>
-      <div class="skill">RSpec</div>
-    </div>
-  </div>
-
-  <!-- Security -->
-  <div class="skills-category">
-    <h3>Security</h3>
-    
-    <!-- Tools & Technologies -->
-    <p><strong>Tools & Technologies:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Prometheus & Grafana</div>
-      <div class="skill">pfSense</div>
-      <div class="skill">OpenVpn</div>
-      <div class="skill">OpenID Connect</div>
-    </div>
-    
-    <!-- Concepts -->
-    <p><strong>Concepts:</strong></p>
-    <div class="skills-list">
-      <div class="skill">Network Security</div>
-      <div class="skill">VPN Configuration</div>
-      <div class="skill">Two-Factor Authentication</div>
-      <div class="skill">Implementation of HTTPS Communication</div>
-    </div>
-  </div>
-
-  <!-- Certifications -->
-  <div class="skills-category">
-    <h3>Certifications</h3>
-    <div class="skills-list">
-      <div class="skill">Passed Japanese Language Proficiency Test N1(2024)</div>
-      <div class="skill">Passed Applied Information Technology Engineer Examination(2023)</div>
-      <div class="skill">Passed Fundamental Information Technology Engineer Examination(2022)</div>
-    </div>
-  </div>
-
-  <div class="skills-category">
-    <h3>Events & Participation</h3>
-    <div class="skills-list">
-      <div class="skill">Participant of the Security Mini Camp in Yamanashi 2024, organized by IPA</div>
-    </div>
-  </div>
-
-</section>
-
-<section id="projects" class="projects">
-  <h2>Projects</h2>
-  <!-- Professional Projects -->
-  <div class="project-category">
-    <h3>Professional Projects(Part Time)</h3>
-    
-    <div class="project-item">
-      <h4>Full Stack Engineer at CUUSOO SYSTEM (Tokyo, JP) — May 2023 - Present</h4>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <!-- 画像を追加 -->
+      <img src="my-photo.jpg" alt="Your Name" class="profile-photo" />
       <p>
-        As a part-time Full Stack Engineer, I have been involved in a project aimed at increasing user engagement and expanding the user base. I have utilized technologies such as Ruby (Ruby on Rails), JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new features and enhance existing functionalities. Below are some key highlights of my contributions:
+        Hello! I'm Shengbo Wang, a student at Waseda University in Japan. Since
+        September 2022, I have been deeply committed to studying IT technology,
+        exploring a wide range of fields that interest me. Over time, I
+        developed a particular focus on web backend development and network
+        security. Currently, I am dedicated to expanding my expertise in Go,
+        Next.js, authentication, and microservices to build robust and scalable
+        web applications.
       </p>
-      <ul>
-        <li>
-          <strong>Implementing Two-Factor Authentication:</strong> To enhance user trust and security, I implemented a two-factor authentication (2FA) system using Ruby and Ruby on Rails. The authentication code was generated using a cryptographically secure random number generation algorithm, SecureRandom, ensuring robust security standards.
-        </li>
-        <li>
-          <strong>Developing Reply-to-Reply Feature for Comments:</strong> To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency.
-        </li>
-        <li>
-          <strong>Implementation of a Comment Notification Settings System:</strong> Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly.
-        </li>
-        <li>
-          <strong>Implementation of a System to Display Company Information on a Map:</strong> To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails.
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>Infrastructure Engineer at Waseda University (Tokyo, JP) — April 2023 - Present</h4>
-      <p>
-        While in my fourth year as an undergraduate student and studying for the Applied Information Technology Engineer Examination, I developed a strong interest in networks and security. To gain practical experience, I joined the lab's server administration team, and in the spring of my first year as a Master's student, I took on the role of leader. My primary responsibilities include assembling and maintaining GPUs for research purposes and building and managing the laboratory network infrastructure. Key achievements include:
-      </p>
-      <ul>
-        <li>
-          <strong>Upgrading Security Protocols and Rebuilding Servers:</strong> Recognizing the need for enhanced security, I upgraded the lab's server communication from HTTP to HTTPS by issuing a certificate myself. I also rebuilt the outdated Prometheus monitoring server from scratch and utilized Kubernetes for easy HTTPS communication setup. Additionally, I rebuilt the lab's outdated pfSense VPN server from scratch, implementing redundancy for improved reliability.
-        </li>
-        <li>
-          <strong>Establishing Secure Guest Wi-Fi and Network Segmentation:</strong> Noticing that visitors could only access the university's Wi-Fi, which led to slow communication, I set up a dedicated guest Wi-Fi for the lab. I also configured a firewall to ensure that guests do not have access to the internal network, thus maintaining network security.
-        </li>
-        <li>
-          <strong>Solving Storage Limitations and Implementing Log Retention Solutions:</strong> To address the recurring issue of "insufficient space for research environments," I mounted an SSD to expand storage capacity. Furthermore, recognizing the importance of log retention for research purposes, I am currently in the process of setting up an MLflow server to manage and analyze logs efficiently.
-        </li>
-      </ul>
-    </div>
-    
-  </div>
-  
-  <!-- Private Projects -->
-  <div class="project-category">
-    <h3>Private Team Projects</h3>
-    <div class="project-item">
-      <h4>Full Stack Engineer (Team hackathon) — August 2024 - Present</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/EC-sister" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
+
+      <!-- Education Section within About Me -->
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Waseda University, Tokyo, JP</h3>
+        <p class="degree">
+          Master of Electrical Engineering and Bioscience, School of Advanced
+          Science and Engineering
+        </p>
+        <p class="dates">April 2024 - March 2026</p>
       </div>
-      <p>
-        I developed an e-commerce platform to address the problem of overwhelming user reviews on online shopping sites. The platform incentivizes users to write high-quality reviews by offering rewards based on the number of likes their reviews receive. Additionally, a planned feature includes a search filtering system that allows users to navigate to their preferred sites, such as Amazon or Rakuten. This project was built using technologies including Next.js, JavaScript, Python, Flask, PostgreSQL, and Docker.
-      </p>
-      <ul>
-        <li>
-          <strong>Review Reward System Implementation:</strong> To enhance user engagement, I implemented a system where users must like a review to access the purchase page, thereby encouraging users to write thoughtful and helpful reviews. Review authors receive rewards based on the number of likes their reviews accumulate.
-        </li>
-        <li>
-          <strong>Database Structure and Optimization:</strong> I structured the database with foreign keys for tables containing articles, users, products, and items from each e-commerce site. This ensured efficient searching capabilities and maintained data consistency across the platform.
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>Game Development Team Leader — March 2023 - October 2023</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/WaseNinja" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
+      <div class="education-item">
+        <h3>Waseda University, Tokyo, JP</h3>
+        <p class="degree">
+          Bachelor of Electrical Engineering and Bioscience, School of Advanced
+          Science and Engineering
+        </p>
+        <p class="dates">April 2020 – March 2024</p>
       </div>
-      <p>
-        As a team leader, I led a development team of eight members to create a "Ninja Maze Game for Elementary School Students to Enjoy Learning Programming" using C#. The goal of this project was to address the shortage of engineering talent by sparking interest in programming among children. The game was presented at the school festival and received positive feedback from over 1,000 attendees, with survey results showing that about 90% of the children became interested in programming.
-      </p>
-      <ul>
-        <li>
-          <strong>Game Design and Development:</strong> I focused on balancing the educational aspect of programming with the fun of the game. We designed mazes that incorporated programming concepts like for loops and recursion, gradually increasing in difficulty. To make the game relatable for elementary school students, we added an original storyline with cute animal characters designed to be friendly and appealing.
-        </li>
-        <li>
-          <strong>Team Management and Collaboration:</strong> In managing the team, I emphasized understanding different perspectives and fostering constructive discussions. I actively asked questions to accurately understand team members' viewpoints and listened carefully to their input. I reassessed my ideas objectively and used concrete data to facilitate decisions that were clear and understandable to everyone.
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="project-category">
-    <h3>Private Personal Projects</h3>
-    <div class="project-item">
-      <h4>Implementing OAuth 2.0 and OpenID Connect (OIDC) in Go — September 2024 – Present</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Auth-go" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
-      </div>
-      <p>
-        I am interested in learning more about Go, especially in the area of security authentication. Therefore, I decided to implement OAuth 2.0 and OpenID Connect (OIDC) in Go. The purpose of this program is to allow users to authenticate with Google and use their authentication information to upload photos to Google Photos. The implementation of OAuth 2.0 has been completed, and the next steps will involve implementing OIDC and integrating front-end design.
-      </p>
-      <ul>
-        <li>
-          <strong>Organized structure of HTTP endpoints:</strong> The /start endpoint redirects users to Google's authentication page, and the /callback endpoint handles post-authentication processes such as token retrieval and photo upload, maintaining a clear flow.
-        </li>
-        <li>
-          <strong>Usage of Google Photos API:</strong> The uploadPhoto() function uploads photos to the Google Photos API's uploads endpoint and retrieves an uploadToken. This token is then used to add the photo to the Google Photos library in the subsequent request.
-        </li>
-      </ul>      
-    </div>
-    <div class="project-item">
-      <h4>Microservices Implementation — July 2024 – Present</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Multi-Service-Apps" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
-      </div>
-      <p>
-        To expand my knowledge beyond monolithic architectures, I decided to implement a ticket sales feature using microservices. This project is currently ongoing and focuses on enhancing service modularity and scalability.
-      </p>
-      <ul>
-        <li>
-          <strong>Backend Development and Service Communication:</strong> I utilized TypeScript for the backend and packaged common functionalities into reusable npm packages to ensure seamless communication between services.
-        </li>
-        <li>
-          <strong>Containerization and Orchestration:</strong> To manage and automate each service, I employed Docker and Kubernetes, deploying the entire system on Google Cloud Platform (GCP).
-        </li>
-        <li>
-          <strong>Testing and Frontend Development:</strong> I carefully designed test cases and wrote test files using Jest and Supertest to ensure the system functions correctly. For the frontend, due to the complexity of managing multiple screens, I chose Next.js for its powerful routing capabilities.
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>Hotel Booking Site — April 2024 - June 2024</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Go-App" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
-      </div>
-      <p>
-        Since I mainly used Ruby during my long-term internship, I wanted to study Go, a non-object-oriented language. To achieve this, I developed a hotel booking website by referring to a course on Udemy. For the database, I chose PostgreSQL due to its high performance and reliability.
-      </p>
-      <ul>
-        <li>
-          <strong>Leveraging Go's Interfaces:</strong> By utilizing Go's interfaces, I was able to use the same codebase for both actual deployment and testing scenarios within the same file, which streamlined the development process.
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>Memory Matching Game — April 2024</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/memory_game" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
-      </div>
-      <p>
-        Having developed a strong foundation in backend development, I decided to expand my knowledge to the frontend to gain a comprehensive understanding of web systems. I created a Memory Matching Game using React to achieve this goal.
-      </p>
-      <ul>
-        <li>
-          <strong>Choosing React for Dynamic UI Updates:</strong> I used React because its features, such as useState, made it easier to handle state changes and implement dynamic screen updates when a card is clicked.
-        </li>
-      </ul>
-    </div>
-    
-    <div class="project-item">
-      <h4>Post-Sharing Website — May 2023 – August 2023</h4>
-      <div class="repository-link">
-        <a href="https://github.com/KeihakuOh/Rails-lesson" target="_blank" class="styled-link">
-          <button class="minimal-btn">
-            <i class="fab fa-github"></i> View GitHub Repository
-          </button>
-        </a>
-      </div>
-      <p>
-        My growing interest in web development led me to learn Ruby on Rails, known for its ease of setup. Using Ruby on Rails, I developed a post-sharing website to enhance my web development skills.
-      </p>
-      <ul>
-        <li>
-          <strong>Implementing MVC and Session Management:</strong> I effectively utilized the MVC model to implement session-related features such as login and logout. I also implemented functionalities
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
 
+      <!-- Hobbies Section within About Me -->
+      <h2>Hobbies</h2>
+      <p>
+        I enjoy exploring various cultures and traveling abroad. Some of the
+        countries I have visited include France and Indonesia. In my free time,
+        I also like working on personal tech projects, reading books on software
+        architecture, and learning new programming languages.
+      </p>
+    </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>If you'd like to get in touch, please feel free to reach out via email.</p>
-  <p>Email: shengbo122519@gmail.com</p>
-  <p>Github: <a href="https://github.com/KeihakuOh" target="_blank">KeihakuOh</a></p>
-</section>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
 
-<footer>
-  <p>&copy; 2024 Shengbo Wang. All rights reserved.</p>
-</footer>
+      <div class="skills-category">
+        <h3>Language Skills</h3>
+        <p><strong>Levels:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Chinese: Native proficiency</div>
+          <div class="skill">Japanese: Native proficiency</div>
+          <div class="skill">English: Conversational proficiency</div>
+        </div>
+      </div>
 
-</body>
+      <!-- Programming Languages -->
+      <div class="skills-category">
+        <h3>Programming Languages</h3>
+        <p><strong>Proficient in:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Python</div>
+          <div class="skill">Ruby</div>
+          <div class="skill">Go</div>
+        </div>
+        <p><strong>Familiar with:</strong></p>
+        <div class="skills-list">
+          <div class="skill">TypeScript</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">C#</div>
+        </div>
+        <p><strong>Experience with:</strong></p>
+        <div class="skills-list">
+          <div class="skill">C</div>
+          <div class="skill">SQL</div>
+          <div class="skill">R</div>
+        </div>
+      </div>
+
+      <!-- Tech -->
+      <div class="skills-category">
+        <h3>Tech</h3>
+        <p><strong>Framework:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Ruby on Rails</div>
+          <div class="skill">Flask</div>
+          <div class="skill">Express</div>
+          <div class="skill">Vue.js</div>
+          <div class="skill">React</div>
+          <div class="skill">Next.js</div>
+          <div class="skill">.NET Framework</div>
+          <div class="skill">TensorFlow</div>
+          <div class="skill">PyTorch</div>
+        </div>
+        <p><strong>UI Framework:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Bootstrap</div>
+          <div class="skill">Material-UI</div>
+        </div>
+        <p><strong>API Design:</strong></p>
+        <div class="skills-list">
+          <div class="skill">REST</div>
+          <div class="skill">GraphQL</div>
+        </div>
+        <p><strong>Architecture:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Microservices</div>
+        </div>
+        <p><strong>Database:</strong></p>
+        <div class="skills-list">
+          <div class="skill">MySQL</div>
+          <div class="skill">PostgreSQL</div>
+          <div class="skill">MongoDB</div>
+          <div class="skill">SQLite</div>
+        </div>
+        <p><strong>Containerization & Orchestration:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Docker</div>
+          <div class="skill">Docker Compose</div>
+          <div class="skill">Kubernetes</div>
+        </div>
+        <p><strong>Version Control:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Git</div>
+          <div class="skill">GitHub</div>
+        </div>
+        <p><strong>Operating System:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Linux</div>
+        </div>
+        <p><strong>Testing Framework:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Jest</div>
+          <div class="skill">Runn</div>
+          <div class="skill">RSpec</div>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="skills-category">
+        <h3>Security</h3>
+
+        <!-- Tools & Technologies -->
+        <p><strong>Tools & Technologies:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Prometheus & Grafana</div>
+          <div class="skill">pfSense</div>
+          <div class="skill">OpenVpn</div>
+          <div class="skill">OpenID Connect</div>
+        </div>
+
+        <!-- Concepts -->
+        <p><strong>Concepts:</strong></p>
+        <div class="skills-list">
+          <div class="skill">Network Security</div>
+          <div class="skill">VPN Configuration</div>
+          <div class="skill">Two-Factor Authentication</div>
+          <div class="skill">Implementation of HTTPS Communication</div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="skills-category">
+        <h3>Certifications</h3>
+        <div class="skills-list">
+          <div class="skill">
+            Passed Japanese Language Proficiency Test N1(2024)
+          </div>
+          <div class="skill">
+            Passed Applied Information Technology Engineer Examination(2023)
+          </div>
+          <div class="skill">
+            Passed Fundamental Information Technology Engineer Examination(2022)
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Events & Participation</h3>
+        <div class="skills-list">
+          <div class="skill">
+            Participant of the Security Mini Camp in Yamanashi 2024, organized
+            by IPA
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <!-- Professional Projects -->
+      <div class="project-category">
+        <h3>Professional Projects(Part Time)</h3>
+
+        <div class="project-item">
+          <h4>
+            Full Stack Engineer at CUUSOO SYSTEM (Tokyo, JP) — May 2023 -
+            Present
+          </h4>
+          <p>
+            As a part-time Full Stack Engineer, I have been involved in a
+            project aimed at increasing user engagement and expanding the user
+            base. I have utilized technologies such as Ruby (Ruby on Rails),
+            JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new
+            features and enhance existing functionalities. Below are some key
+            highlights of my contributions:
+          </p>
+          <ul>
+            <li>
+              <strong>Implementing Two-Factor Authentication:</strong> To
+              enhance user trust and security, I implemented a two-factor
+              authentication (2FA) system using Ruby and Ruby on Rails. The
+              authentication code was generated using a cryptographically secure
+              random number generation algorithm, SecureRandom, ensuring robust
+              security standards.
+            </li>
+            <li>
+              <strong>Developing Reply-to-Reply Feature for Comments:</strong>
+              To support our user growth strategy, I worked on adding a
+              reply-to-reply feature to the existing commenting system. Given
+              the high load on the current server, we optimized the database by
+              distinguishing between comment replies and replies to replies
+              using a flag within the comments table, rather than creating new
+              tables, thus maintaining database efficiency.
+            </li>
+            <li>
+              <strong
+                >Implementation of a Comment Notification Settings
+                System:</strong
+              >
+              Initially, I implemented a feature to notify users whenever a
+              related article was commented on. However, it was determined that
+              not all users needed such notifications every time. To address
+              this, I improved the functionality to allow users to configure
+              whether they want to receive notifications. This implementation
+              was done using Ruby and Ruby on Rails. Additionally, since there
+              were many common settings, I created a parent class and
+              implemented inheritance from it. Furthermore, I considered
+              different test cases depending on the device and conducted testing
+              accordingly.
+            </li>
+            <li>
+              <strong
+                >Implementation of a System to Display Company Information on a
+                Map:</strong
+              >
+              To provide a clear visual representation of where companies are
+              located within a specific area, I implemented a system that
+              displays company information on a map. Additionally, I developed a
+              user interface for inputting company location data and the backend
+              logic to send and save that data. The system was built using
+              Vue.js and Ruby on Rails.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>
+            Infrastructure Engineer at Waseda University (Tokyo, JP) — April
+            2023 - Present
+          </h4>
+          <p>
+            While in my fourth year as an undergraduate student and studying for
+            the Applied Information Technology Engineer Examination, I developed
+            a strong interest in networks and security. To gain practical
+            experience, I joined the lab's server administration team, and in
+            the spring of my first year as a Master's student, I took on the
+            role of leader. My primary responsibilities include assembling and
+            maintaining GPUs for research purposes and building and managing the
+            laboratory network infrastructure. Key achievements include:
+          </p>
+          <ul>
+            <li>
+              <strong
+                >Upgrading Security Protocols and Rebuilding Servers:</strong
+              >
+              Recognizing the need for enhanced security, I upgraded the lab's
+              server communication from HTTP to HTTPS by issuing a certificate
+              myself. I also rebuilt the outdated Prometheus monitoring server
+              from scratch and utilized Kubernetes for easy HTTPS communication
+              setup. Additionally, I rebuilt the lab's outdated pfSense VPN
+              server from scratch, implementing redundancy for improved
+              reliability.
+            </li>
+            <li>
+              <strong
+                >Establishing Secure Guest Wi-Fi and Network
+                Segmentation:</strong
+              >
+              Noticing that visitors could only access the university's Wi-Fi,
+              which led to slow communication, I set up a dedicated guest Wi-Fi
+              for the lab. I also configured a firewall to ensure that guests do
+              not have access to the internal network, thus maintaining network
+              security.
+            </li>
+            <li>
+              <strong
+                >Solving Storage Limitations and Implementing Log Retention
+                Solutions:</strong
+              >
+              To address the recurring issue of "insufficient space for research
+              environments," I mounted an SSD to expand storage capacity.
+              Furthermore, recognizing the importance of log retention for
+              research purposes, I am currently in the process of setting up an
+              MLflow server to manage and analyze logs efficiently.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Private Projects -->
+      <div class="project-category">
+        <h3>Private Team Projects</h3>
+        <div class="project-item">
+          <h4>Full Stack Engineer (Team hackathon) — August 2024 - Present</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/EC-sister"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            I developed an e-commerce platform to address the problem of
+            overwhelming user reviews on online shopping sites. The platform
+            incentivizes users to write high-quality reviews by offering rewards
+            based on the number of likes their reviews receive. Additionally, a
+            planned feature includes a search filtering system that allows users
+            to navigate to their preferred sites, such as Amazon or Rakuten.
+            This project was built using technologies including Next.js,
+            JavaScript, Python, Flask, PostgreSQL, and Docker.
+          </p>
+          <ul>
+            <li>
+              <strong>Review Reward System Implementation:</strong> To enhance
+              user engagement, I implemented a system where users must like a
+              review to access the purchase page, thereby encouraging users to
+              write thoughtful and helpful reviews. Review authors receive
+              rewards based on the number of likes their reviews accumulate.
+            </li>
+            <li>
+              <strong>Database Structure and Optimization:</strong> I structured
+              the database with foreign keys for tables containing articles,
+              users, products, and items from each e-commerce site. This ensured
+              efficient searching capabilities and maintained data consistency
+              across the platform.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>Game Development Team Leader — March 2023 - October 2023</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/WaseNinja"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            As a team leader, I led a development team of eight members to
+            create a "Ninja Maze Game for Elementary School Students to Enjoy
+            Learning Programming" using C#. The goal of this project was to
+            address the shortage of engineering talent by sparking interest in
+            programming among children. The game was presented at the school
+            festival and received positive feedback from over 1,000 attendees,
+            with survey results showing that about 90% of the children became
+            interested in programming.
+          </p>
+          <ul>
+            <li>
+              <strong>Game Design and Development:</strong> I focused on
+              balancing the educational aspect of programming with the fun of
+              the game. We designed mazes that incorporated programming concepts
+              like for loops and recursion, gradually increasing in difficulty.
+              To make the game relatable for elementary school students, we
+              added an original storyline with cute animal characters designed
+              to be friendly and appealing.
+            </li>
+            <li>
+              <strong>User-Centric Enhancements:</strong>
+              Recognizing that children may be unfamiliar with using a PC, I
+              added guidance and enhanced the drag-and-drop functionality to
+              improve usability.
+            </li>
+            <li>
+              <strong>Team Management and Collaboration:</strong> In managing
+              the team, I emphasized understanding different perspectives and
+              fostering constructive discussions. I actively asked questions to
+              accurately understand team members' viewpoints and listened
+              carefully to their input. I reassessed my ideas objectively and
+              used concrete data to facilitate decisions that were clear and
+              understandable to everyone.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-category">
+        <h3>Private Personal Projects</h3>
+        <div class="project-item">
+          <h4>
+            Implementing OAuth 2.0 and OpenID Connect (OIDC) in Go — September
+            2024 – Present
+          </h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Auth-go"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            I am interested in learning more about Go, especially in the area of
+            security authentication. Therefore, I decided to implement OAuth 2.0
+            and OpenID Connect (OIDC) in Go. The purpose of this program is to
+            allow users to authenticate with Google and use their authentication
+            information to upload photos to Google Photos. The implementation of
+            OAuth 2.0 has been completed, and the next steps will involve
+            implementing OIDC and integrating front-end design.
+          </p>
+          <ul>
+            <li>
+              <strong>Organized structure of HTTP endpoints:</strong> The /start
+              endpoint redirects users to Google's authentication page, and the
+              /callback endpoint handles post-authentication processes such as
+              token retrieval and photo upload, maintaining a clear flow.
+            </li>
+            <li>
+              <strong>Usage of Google Photos API:</strong> The uploadPhoto()
+              function uploads photos to the Google Photos API's uploads
+              endpoint and retrieves an uploadToken. This token is then used to
+              add the photo to the Google Photos library in the subsequent
+              request.
+            </li>
+          </ul>
+        </div>
+        <div class="project-item">
+          <h4>Microservices Implementation — July 2024 – September 2024</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Multi-Service-Apps"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            To expand my knowledge beyond monolithic architectures, I decided to
+            implement a ticket sales feature using microservices. This project
+            is currently ongoing and focuses on enhancing service modularity and
+            scalability.
+          </p>
+          <ul>
+            <li>
+              <strong>Backend Development and Service Communication:</strong> I
+              utilized TypeScript for the backend and packaged common
+              functionalities into reusable npm packages to ensure seamless
+              communication between services.
+            </li>
+            <li>
+              <strong>Containerization and Orchestration:</strong> Adopted
+              Docker and Kubernetes for the management and automation of each
+              service. Additionally, for learning purposes, deployed the entire
+              system on Google Cloud Platform (GCP).
+            </li>
+            <li>
+              <strong>Testing and Frontend Development:</strong> I carefully
+              designed test cases and wrote test files using Jest and Supertest
+              to ensure the system functions correctly. For the frontend, due to
+              the complexity of managing multiple screens, I chose Next.js for
+              its powerful routing capabilities.
+            </li>
+            <li>
+              <strong>Authentication:</strong>
+              To reduce dependency on the authentication service and improve
+              scalability and performance, implemented user verification within
+              each service using JWT tokens.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>Hotel Booking Site — April 2024 - June 2024</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Go-App"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            Since I mainly used Ruby during my long-term internship, I wanted to
+            study Go, a non-object-oriented language. To achieve this, I
+            developed a hotel booking website by referring to a course on Udemy.
+            For the database, I chose PostgreSQL due to its high performance and
+            reliability.
+          </p>
+          <ul>
+            <li>
+              <strong>Leveraging Go's Interfaces:</strong> By utilizing Go's
+              interfaces, I was able to use the same codebase for both actual
+              deployment and testing scenarios within the same file, which
+              streamlined the development process.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>Memory Matching Game — April 2024</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/memory_game"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            Having developed a strong foundation in backend development, I
+            decided to expand my knowledge to the frontend to gain a
+            comprehensive understanding of web systems. I created a Memory
+            Matching Game using React to achieve this goal.
+          </p>
+          <ul>
+            <li>
+              <strong>Choosing React for Dynamic UI Updates:</strong> I used
+              React because its features, such as useState, made it easier to
+              handle state changes and implement dynamic screen updates when a
+              card is clicked.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-item">
+          <h4>Post-Sharing Website — May 2023 – August 2023</h4>
+          <div class="repository-link">
+            <a
+              href="https://github.com/KeihakuOh/Rails-lesson"
+              target="_blank"
+              class="styled-link"
+            >
+              <button class="minimal-btn">
+                <i class="fab fa-github"></i> View GitHub Repository
+              </button>
+            </a>
+          </div>
+          <p>
+            My growing interest in web development led me to learn Ruby on
+            Rails, known for its ease of setup. Using Ruby on Rails, I developed
+            a post-sharing website to enhance my web development skills.
+          </p>
+          <ul>
+            <li>
+              <strong>Implementing MVC and Session Management:</strong> I
+              effectively utilized the MVC model to implement session-related
+              features such as login and logout. I also implemented
+              functionalities
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you'd like to get in touch, please feel free to reach out via email.
+      </p>
+      <p>Email: shengbo122519@gmail.com</p>
+      <p>
+        Github:
+        <a href="https://github.com/KeihakuOh" target="_blank">KeihakuOh</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Shengbo Wang. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
