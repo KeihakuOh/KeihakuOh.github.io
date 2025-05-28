@@ -496,43 +496,6 @@
             background: linear-gradient(135deg, var(--card-bg), rgba(99, 102, 241, 0.1));
         }
 
-        /* Experience - Timeline */
-        .experience-timeline {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            padding-left: 40px;
-        }
-
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--gradient);
-        }
-
-        .experience-card {
-            padding: 3rem;
-            border-radius: 30px;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            left: -42px;
-            top: 3rem;
-            width: 15px;
-            height: 15px;
-            background: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 0 5px var(--dark);
-        }
-
         /* Projects - Masonry Style */
         .projects-container {
             max-width: 1200px;
@@ -688,10 +651,6 @@
             .education-card::before {
                 left: 10px !important;
                 right: auto !important;
-            }
-            
-            .experience-timeline {
-                padding-left: 20px;
             }
         }
 
@@ -1394,7 +1353,6 @@
                 <a href="#languages" data-en="Languages" data-jp="言語">Languages</a>
                 <a href="#skills" data-en="Skills" data-jp="スキル">Skills</a>
                 <a href="#certifications" data-en="Certifications" data-jp="資格">Certifications</a>
-                <a href="#experience" data-en="Experience" data-jp="経験">Experience(</a>
                 <a href="#projects" data-en="Projects" data-jp="プロジェクト">Projects</a>
                 <a href="#contact" data-en="Contact" data-jp="連絡先">Contact</a>
                 <button class="language-toggle" onclick="toggleLanguage()">
@@ -1434,11 +1392,11 @@
             </div>
             <div class="about-stats">
                 <div class="stat-card">
-                    <div class="stat-number">3+</div>
+                    <div class="stat-number">2+</div>
                     <p data-en="Years of Experience" data-jp="年の経験">Years of Experience</p>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">10+</div>
                     <p data-en="Projects Completed" data-jp="完成したプロジェクト">Projects Completed</p>
                 </div>
                 <div class="stat-card">
@@ -1510,66 +1468,6 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section" id="skills">
-        <div class="section-wrapper">
-            <h2 class="section-title fade-in" data-en="Technical Skills" data-jp="技術スキル">Technical Skills</h2>
-            <div class="skills-container fade-in">
-
-    <!-- Work Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title fade-in" data-en="Professional Experience" data-jp="職歴(パートタイム)">Professional Experience</h2>
-        <div class="experience-timeline fade-in">
-            <div class="experience-card glass">
-                <h3 data-en="Full Stack Engineer at CUUSOO SYSTEM" data-jp="株式会社CUUSOO SYSTEMでのフルスタックエンジニア">Full Stack Engineer at CUUSOO SYSTEM</h3>
-                <p class="experience-date">Tokyo, JP — May 2023 - Present</p>
-                <p data-en="As a part-time Full Stack Engineer, I have been involved in a project aimed at increasing user engagement and expanding the user base. I have utilized technologies such as Ruby (Ruby on Rails), JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new features and enhance existing functionalities."
-                   data-jp="パートタイムのフルスタックエンジニアとして、ユーザーのエンゲージメントを向上し、ユーザーベースを拡大するプロジェクトに携わっています。Ruby（Ruby on Rails）、JavaScript（React、Vue.js）、Python、Docker、MySQLなどの技術を使用して、新機能の開発や既存機能の改善を行っています。">
-                    As a part-time Full Stack Engineer, I have been involved in a project aimed at increasing user engagement and expanding the user base. I have utilized technologies such as Ruby (Ruby on Rails), JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new features and enhance existing functionalities.
-                </p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li data-en="Implementing Two-Factor Authentication: To enhance user trust and security, I implemented a two-factor authentication (2FA) system using Ruby and Ruby on Rails. The authentication code was generated using a cryptographically secure random number generation algorithm, SecureRandom, ensuring robust security standards."
-                        data-jp="二要素認証の実装: ユーザーの信頼とセキュリティを向上させるため、RubyとRuby on Railsを使用して二要素認証（2FA）システムを実装しました。認証コードは、SecureRandomなどの暗号的に安全な乱数生成アルゴリズムを使用して生成され、堅牢なセキュリティ基準を確保しました。">
-                        <strong>Implementing Two-Factor Authentication:</strong> To enhance user trust and security, I implemented a two-factor authentication (2FA) system using Ruby and Ruby on Rails. The authentication code was generated using a cryptographically secure random number generation algorithm, SecureRandom, ensuring robust security standards.
-                    </li>
-                    <li data-en="Developing Reply-to-Reply Feature for Comments: To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency."
-                        data-jp="コメントへのリプライ機能の開発: ユーザー成長戦略の一環として、既存のコメントシステムにリプライ機能を追加しました。高負荷のサーバーを考慮し、新しいテーブルを追加する代わりに、コメントテーブル内でフラグを設定してコメントとリプライを区別することで、データベースの効率を維持しました。">
-                        <strong>Developing Reply-to-Reply Feature for Comments:</strong> To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency.
-                    </li>
-                    <li data-en="Implementation of a Comment Notification Settings System: Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly."
-                        data-jp="コメント通知設定システムの実装: ユーザーに関連記事のコメントがされた際に通知する機能を実装していましたが、すべてのユーザーに毎回通知が送られるのは不要と判断しました。そのため、ユーザーが通知の有無を設定できるように改善しました。この実装には、RubyとRuby on Railsを使用しています。また、共通する設定部分が多いため、親クラスを作成し、それを継承する形で実装を行いました。さらに、テストケースについては、端末ごとの考慮が必要であるため、それに基づいたテストを実施しました。">
-                        <strong>Implementation of a Comment Notification Settings System:</strong> Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly.
-                    </li>
-                    <li data-en="Implementation of a System to Display Company Information on a Map: To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails."
-                        data-jp="企業情報がマップ上に表示されるシステムの実装: エリア内の各企業の所在地を視覚的にわかりやすくするため、企業情報をマップ上に表示するシステムを実装しました。また、ユーザーが自分の企業の位置情報を入力して保存できるように、企業の位置情報を入力する画面と、それをバックエンドに送信して保存するロジックを実装しました。このシステムの実装には、Vue.jsとRuby on Railsを使用しました。">
-                        <strong>Implementation of a System to Display Company Information on a Map:</strong> To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="experience-card glass">
-                <h3 data-en="Infrastructure Engineer at Waseda University" data-jp="早稲田大学でのインフラエンジニア">Infrastructure Engineer at Waseda University</h3>
-                <p class="experience-date">Tokyo, JP — April 2023 - Present</p>
-                <p data-en="While in my fourth year as an undergraduate student and studying for the Applied Information Technology Engineer Examination, I developed a strong interest in networks and security. To gain practical experience, I joined the lab's server administration team, and in the spring of my first year as a Master's student, I took on the role of leader. My primary responsibilities include assembling and maintaining GPUs for research purposes and building and managing the laboratory network infrastructure."
-                   data-jp="学部4年生の時、応用情報技術者試験を勉強する中でネットワークとセキュリティに強い興味を持つようになり、実践的な経験を得るために研究室のサーバー管理チームに参加しました。修士1年の春にはリーダーを務めました。主な担当業務には、研究用のGPUの組み立てと保守、研究室ネットワークインフラの構築と管理が含まれます。">
-                    While in my fourth year as an undergraduate student and studying for the Applied Information Technology Engineer Examination, I developed a strong interest in networks and security. To gain practical experience, I joined the lab's server administration team, and in the spring of my first year as a Master's student, I took on the role of leader. My primary responsibilities include assembling and maintaining GPUs for research purposes and building and managing the laboratory network infrastructure.
-                </p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary);">
-                    <li data-en="Upgrading Security Protocols and Rebuilding Servers: Recognizing the need for enhanced security, I upgraded the lab's server communication from HTTP to HTTPS by issuing a certificate myself. I also rebuilt the outdated Prometheus monitoring server from scratch and utilized Kubernetes for easy HTTPS communication setup. Additionally, I rebuilt the lab's outdated pfSense VPN server from scratch, implementing redundancy for improved reliability."
-                        data-jp="セキュリティプロトコルのアップグレードとサーバーの再構築: セキュリティを向上させるため、研究室のサーバー通信をHTTPからHTTPSにアップグレードし、自己署名証明書を発行しました。また、古いPrometheusモニタリングサーバーをゼロから再構築し、Kubernetesを使用してHTTPS通信を簡単にセットアップしました。さらに、古いpfSense VPNサーバーも再構築し、冗長性を実装しました。">
-                        <strong>Upgrading Security Protocols and Rebuilding Servers:</strong> Recognizing the need for enhanced security, I upgraded the lab's server communication from HTTP to HTTPS by issuing a certificate myself. I also rebuilt the outdated Prometheus monitoring server from scratch and utilized Kubernetes for easy HTTPS communication setup. Additionally, I rebuilt the lab's outdated pfSense VPN server from scratch, implementing redundancy for improved reliability.
-                    </li>
-                    <li data-en="Establishing Secure Guest Wi-Fi and Network Segmentation: Noticing that visitors could only access the university's Wi-Fi, which led to slow communication, I set up a dedicated guest Wi-Fi for the lab. I also configured a firewall to ensure that guests do not have access to the internal network, thus maintaining network security."
-                        data-jp="安全なゲストWi-Fiの確立とネットワークセグメンテーション: 訪問者が大学のWi-Fiのみを使用していたため、通信速度が遅くなることを考慮し、研究室専用のゲストWi-Fiを設定しました。また、ゲストが内部ネットワークにアクセスできないようにファイアウォールを設定しました。">
-                        <strong>Establishing Secure Guest Wi-Fi and Network Segmentation:</strong> Noticing that visitors could only access the university's Wi-Fi, which led to slow communication, I set up a dedicated guest Wi-Fi for the lab. I also configured a firewall to ensure that guests do not have access to the internal network, thus maintaining network security.
-                    </li>
-                    <li data-en="Solving Storage Limitations and Implementing Log Retention Solutions: To address the recurring issue of 'insufficient space for research environments,' I mounted an SSD to expand storage capacity. Furthermore, recognizing the importance of log retention for research purposes, I am currently in the process of setting up an MLflow server to manage and analyze logs efficiently."
-                        data-jp="ストレージ制限の解決とログ保持ソリューションの実装: 「研究環境のスペース不足」という問題を解決するため、SSDを取り付けてストレージ容量を拡張しました。また、研究のためにログを保持する重要性を考慮し、MLflowサーバーのセットアップを進めています。">
-                        <strong>Solving Storage Limitations and Implementing Log Retention Solutions:</strong> To address the recurring issue of "insufficient space for research environments," I mounted an SSD to expand storage capacity. Furthermore, recognizing the importance of log retention for research purposes, I am currently in the process of setting up an MLflow server to manage and analyze logs efficiently.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
     <section class="section" id="skills">
         <h2 class="section-title fade-in" data-en="Technical Skills" data-jp="技術スキル">Technical Skills</h2>
         <div class="skills-grid fade-in">
@@ -1723,11 +1621,58 @@
             <!-- Professional Projects -->
             <h3 class="project-category-title fade-in" style="text-align: center; margin-bottom: 2rem; color: var(--text-primary);" 
                 data-en="Professional Projects (Part Time)" data-jp="プロフェッショナルプロジェクト（パートタイム）">Professional Projects (Part Time)</h3>
-        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;" 
-           data-en="See Work Experience section above for detailed professional project descriptions"
-           data-jp="詳細な職業プロジェクトの説明については、上記の職歴セクションをご覧ください">
-            See Work Experience section above for detailed professional project descriptions
-        </p>
+        
+        <div class="experience-timeline fade-in">
+            <div class="experience-card glass">
+                <h3 data-en="Full Stack Engineer at CUUSOO SYSTEM" data-jp="株式会社CUUSOO SYSTEMでのフルスタックエンジニア">Full Stack Engineer at CUUSOO SYSTEM</h3>
+                <p class="experience-date">Tokyo, JP — May 2023 - Present</p>
+                <p data-en="As a part-time Full Stack Engineer, I have been involved in a project aimed at increasing user engagement and expanding the user base. I have utilized technologies such as Ruby (Ruby on Rails), JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new features and enhance existing functionalities."
+                   data-jp="パートタイムのフルスタックエンジニアとして、ユーザーのエンゲージメントを向上し、ユーザーベースを拡大するプロジェクトに携わっています。Ruby（Ruby on Rails）、JavaScript（React、Vue.js）、Python、Docker、MySQLなどの技術を使用して、新機能の開発や既存機能の改善を行っています。">
+                    As a part-time Full Stack Engineer, I have been involved in a project aimed at increasing user engagement and expanding the user base. I have utilized technologies such as Ruby (Ruby on Rails), JavaScript (React, Vue.js), Python, Docker, and MySQL to develop new features and enhance existing functionalities.
+                </p>
+                <ul style="margin-top: 1rem; color: var(--text-secondary);">
+                    <li data-en="Implementing Two-Factor Authentication: To enhance user trust and security, I implemented a two-factor authentication (2FA) system using Ruby and Ruby on Rails. The authentication code was generated using a cryptographically secure random number generation algorithm, SecureRandom, ensuring robust security standards."
+                        data-jp="二要素認証の実装: ユーザーの信頼とセキュリティを向上させるため、RubyとRuby on Railsを使用して二要素認証（2FA）システムを実装しました。認証コードは、SecureRandomなどの暗号的に安全な乱数生成アルゴリズムを使用して生成され、堅牢なセキュリティ基準を確保しました。">
+                        <strong>Implementing Two-Factor Authentication:</strong> To enhance user trust and security, I implemented a two-factor authentication (2FA) system using Ruby and Ruby on Rails. The authentication code was generated using a cryptographically secure random number generation algorithm, SecureRandom, ensuring robust security standards.
+                    </li>
+                    <li data-en="Developing Reply-to-Reply Feature for Comments: To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency."
+                        data-jp="コメントへのリプライ機能の開発: ユーザー成長戦略の一環として、既存のコメントシステムにリプライ機能を追加しました。高負荷のサーバーを考慮し、新しいテーブルを追加する代わりに、コメントテーブル内でフラグを設定してコメントとリプライを区別することで、データベースの効率を維持しました。">
+                        <strong>Developing Reply-to-Reply Feature for Comments:</strong> To support our user growth strategy, I worked on adding a reply-to-reply feature to the existing commenting system. Given the high load on the current server, we optimized the database by distinguishing between comment replies and replies to replies using a flag within the comments table, rather than creating new tables, thus maintaining database efficiency.
+                    </li>
+                    <li data-en="Implementation of a Comment Notification Settings System: Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly."
+                        data-jp="コメント通知設定システムの実装: ユーザーに関連記事のコメントがされた際に通知する機能を実装していましたが、すべてのユーザーに毎回通知が送られるのは不要と判断しました。そのため、ユーザーが通知の有無を設定できるように改善しました。この実装には、RubyとRuby on Railsを使用しています。また、共通する設定部分が多いため、親クラスを作成し、それを継承する形で実装を行いました。さらに、テストケースについては、端末ごとの考慮が必要であるため、それに基づいたテストを実施しました。">
+                        <strong>Implementation of a Comment Notification Settings System:</strong> Initially, I implemented a feature to notify users whenever a related article was commented on. However, it was determined that not all users needed such notifications every time. To address this, I improved the functionality to allow users to configure whether they want to receive notifications. This implementation was done using Ruby and Ruby on Rails. Additionally, since there were many common settings, I created a parent class and implemented inheritance from it. Furthermore, I considered different test cases depending on the device and conducted testing accordingly.
+                    </li>
+                    <li data-en="Implementation of a System to Display Company Information on a Map: To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails."
+                        data-jp="企業情報がマップ上に表示されるシステムの実装: エリア内の各企業の所在地を視覚的にわかりやすくするため、企業情報をマップ上に表示するシステムを実装しました。また、ユーザーが自分の企業の位置情報を入力して保存できるように、企業の位置情報を入力する画面と、それをバックエンドに送信して保存するロジックを実装しました。このシステムの実装には、Vue.jsとRuby on Railsを使用しました。">
+                        <strong>Implementation of a System to Display Company Information on a Map:</strong> To provide a clear visual representation of where companies are located within a specific area, I implemented a system that displays company information on a map. Additionally, I developed a user interface for inputting company location data and the backend logic to send and save that data. The system was built using Vue.js and Ruby on Rails.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience-card glass">
+                <h3 data-en="Infrastructure Engineer at Waseda University" data-jp="早稲田大学でのインフラエンジニア">Infrastructure Engineer at Waseda University</h3>
+                <p class="experience-date">Tokyo, JP — April 2023 - Present</p>
+                <p data-en="While in my fourth year as an undergraduate student and studying for the Applied Information Technology Engineer Examination, I developed a strong interest in networks and security. To gain practical experience, I joined the lab's server administration team, and in the spring of my first year as a Master's student, I took on the role of leader. My primary responsibilities include assembling and maintaining GPUs for research purposes and building and managing the laboratory network infrastructure."
+                   data-jp="学部4年生の時、応用情報技術者試験を勉強する中でネットワークとセキュリティに強い興味を持つようになり、実践的な経験を得るために研究室のサーバー管理チームに参加しました。修士1年の春にはリーダーを務めました。主な担当業務には、研究用のGPUの組み立てと保守、研究室ネットワークインフラの構築と管理が含まれます。">
+                    While in my fourth year as an undergraduate student and studying for the Applied Information Technology Engineer Examination, I developed a strong interest in networks and security. To gain practical experience, I joined the lab's server administration team, and in the spring of my first year as a Master's student, I took on the role of leader. My primary responsibilities include assembling and maintaining GPUs for research purposes and building and managing the laboratory network infrastructure.
+                </p>
+                <ul style="margin-top: 1rem; color: var(--text-secondary);">
+                    <li data-en="Upgrading Security Protocols and Rebuilding Servers: Recognizing the need for enhanced security, I upgraded the lab's server communication from HTTP to HTTPS by issuing a certificate myself. I also rebuilt the outdated Prometheus monitoring server from scratch and utilized Kubernetes for easy HTTPS communication setup. Additionally, I rebuilt the lab's outdated pfSense VPN server from scratch, implementing redundancy for improved reliability."
+                        data-jp="セキュリティプロトコルのアップグレードとサーバーの再構築: セキュリティを向上させるため、研究室のサーバー通信をHTTPからHTTPSにアップグレードし、自己署名証明書を発行しました。また、古いPrometheusモニタリングサーバーをゼロから再構築し、Kubernetesを使用してHTTPS通信を簡単にセットアップしました。さらに、古いpfSense VPNサーバーも再構築し、冗長性を実装しました。">
+                        <strong>Upgrading Security Protocols and Rebuilding Servers:</strong> Recognizing the need for enhanced security, I upgraded the lab's server communication from HTTP to HTTPS by issuing a certificate myself. I also rebuilt the outdated Prometheus monitoring server from scratch and utilized Kubernetes for easy HTTPS communication setup. Additionally, I rebuilt the lab's outdated pfSense VPN server from scratch, implementing redundancy for improved reliability.
+                    </li>
+                    <li data-en="Establishing Secure Guest Wi-Fi and Network Segmentation: Noticing that visitors could only access the university's Wi-Fi, which led to slow communication, I set up a dedicated guest Wi-Fi for the lab. I also configured a firewall to ensure that guests do not have access to the internal network, thus maintaining network security."
+                        data-jp="安全なゲストWi-Fiの確立とネットワークセグメンテーション: 訪問者が大学のWi-Fiのみを使用していたため、通信速度が遅くなることを考慮し、研究室専用のゲストWi-Fiを設定しました。また、ゲストが内部ネットワークにアクセスできないようにファイアウォールを設定しました。">
+                        <strong>Establishing Secure Guest Wi-Fi and Network Segmentation:</strong> Noticing that visitors could only access the university's Wi-Fi, which led to slow communication, I set up a dedicated guest Wi-Fi for the lab. I also configured a firewall to ensure that guests do not have access to the internal network, thus maintaining network security.
+                    </li>
+                    <li data-en="Solving Storage Limitations and Implementing Log Retention Solutions: To address the recurring issue of 'insufficient space for research environments,' I mounted an SSD to expand storage capacity. Furthermore, recognizing the importance of log retention for research purposes, I am currently in the process of setting up an MLflow server to manage and analyze logs efficiently."
+                        data-jp="ストレージ制限の解決とログ保持ソリューションの実装: 「研究環境のスペース不足」という問題を解決するため、SSDを取り付けてストレージ容量を拡張しました。また、研究のためにログを保持する重要性を考慮し、MLflowサーバーのセットアップを進めています。">
+                        <strong>Solving Storage Limitations and Implementing Log Retention Solutions:</strong> To address the recurring issue of "insufficient space for research environments," I mounted an SSD to expand storage capacity. Furthermore, recognizing the importance of log retention for research purposes, I am currently in the process of setting up an MLflow server to manage and analyze logs efficiently.
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <!-- Private Team Projects -->
         <h3 class="project-category-title fade-in" style="text-align: center; margin-bottom: 2rem; color: var(--text-primary);"
